@@ -143,15 +143,15 @@ namespace UI
 
         private void EmployeesButton_Click(object sender, EventArgs e)
         {
-            //if (!MainPanel.Controls.ContainsKey("ucEmployees"))
-            //{
-            //    UcEmployees ucEmployees = new UcEmployees();
-            //    ucEmployees.Size = MainPanel.Size;
-            //    ucEmployees.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom);
-            //    MainPanel.Controls.Add(ucEmployees);
-            //}
-            //MainPanel.Controls["ucEmployees"].BringToFront();
-            //toolStripStatusLabel1.Text = "Sistema de facturación – Pantalla De Empleados.";
+            if (!MainPanel.Controls.ContainsKey("ucEmployees"))
+            {
+                UcEmployee ucEmployee = new UcEmployee();
+                ucEmployee.Size = MainPanel.Size;
+                ucEmployee.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom);
+                MainPanel.Controls.Add(ucEmployee);
+            }
+            MainPanel.Controls["ucEmployee"].BringToFront();
+            toolStripStatusLabel1.Text = "Sistema de facturación – Pantalla De Empleados.";
         }
 
         private void BusinessButton_Click(object sender, EventArgs e)
