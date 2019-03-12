@@ -1,4 +1,5 @@
 ﻿using POSSystemLibrary.Models;
+using POSSystemLibrary.SQLiteDataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace POSSystemLibrary.Management
                     Identification = identification,
                     Born_Date = bornDate
                 };
-                return true; //ClientConnection.InsertClient(clientModel);
+                return ClientConnection.InsertClient(clientModel);
             }
             catch (Exception ex)
             {
@@ -70,7 +71,7 @@ namespace POSSystemLibrary.Management
                     Identification = identification,
                     Born_Date = bornDate
                 };
-                return true; // ClientConnection.UpdateClientById(clientModel);
+                return ClientConnection.UpdateClientById(clientModel);
             }
             catch (Exception ex)
             {
@@ -92,7 +93,7 @@ namespace POSSystemLibrary.Management
                 {
                     Id_Client = id
                 };
-                return true; // ClientConnection.DeleteClientById(clientModel);
+                return ClientConnection.DeleteClientById(clientModel);
             }
             catch (Exception ex)
             {
