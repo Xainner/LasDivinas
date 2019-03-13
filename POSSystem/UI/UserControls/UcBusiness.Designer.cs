@@ -36,28 +36,26 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.metroTextBox4 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.metroTextBox6 = new MetroFramework.Controls.MetroTextBox();
+            this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.metroTextBox7 = new MetroFramework.Controls.MetroTextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.metroTextBox8 = new MetroFramework.Controls.MetroTextBox();
+            this.EmailTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.WebPageTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.TelephoneTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.LegalDocumentTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.AddressTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.SocietyNameTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.NameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.metroTextBox5 = new MetroFramework.Controls.MetroTextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.CleanButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.SearchButton = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -133,15 +131,15 @@
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.pictureBox2);
+            this.groupBox1.Controls.Add(this.LogoPictureBox);
             this.groupBox1.Controls.Add(this.label9);
-            this.groupBox1.Controls.Add(this.metroTextBox5);
-            this.groupBox1.Controls.Add(this.metroTextBox4);
-            this.groupBox1.Controls.Add(this.metroTextBox7);
-            this.groupBox1.Controls.Add(this.metroTextBox3);
-            this.groupBox1.Controls.Add(this.metroTextBox8);
-            this.groupBox1.Controls.Add(this.metroTextBox2);
-            this.groupBox1.Controls.Add(this.metroTextBox1);
+            this.groupBox1.Controls.Add(this.EmailTextBox);
+            this.groupBox1.Controls.Add(this.WebPageTextBox);
+            this.groupBox1.Controls.Add(this.TelephoneTextBox);
+            this.groupBox1.Controls.Add(this.LegalDocumentTextBox);
+            this.groupBox1.Controls.Add(this.AddressTextBox);
+            this.groupBox1.Controls.Add(this.SocietyNameTextBox);
+            this.groupBox1.Controls.Add(this.NameTextBox);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
@@ -155,182 +153,319 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
-            // metroTextBox4
+            // LogoPictureBox
             // 
-            this.metroTextBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.LogoPictureBox.Location = new System.Drawing.Point(1049, 37);
+            this.LogoPictureBox.Name = "LogoPictureBox";
+            this.LogoPictureBox.Size = new System.Drawing.Size(214, 100);
+            this.LogoPictureBox.TabIndex = 7;
+            this.LogoPictureBox.TabStop = false;
             // 
+            // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
+            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Location = new System.Drawing.Point(22, 97);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(133, 20);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "    Cédula Jurídica";
             // 
-            this.metroTextBox4.CustomButton.Image = null;
-            this.metroTextBox4.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox4.CustomButton.Name = "";
-            this.metroTextBox4.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox4.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox4.CustomButton.TabIndex = 1;
-            this.metroTextBox4.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox4.CustomButton.UseSelectable = true;
-            this.metroTextBox4.CustomButton.Visible = false;
-            this.metroTextBox4.Lines = new string[0];
-            this.metroTextBox4.Location = new System.Drawing.Point(584, 97);
-            this.metroTextBox4.MaxLength = 32767;
-            this.metroTextBox4.Name = "metroTextBox4";
-            this.metroTextBox4.PasswordChar = '\0';
-            this.metroTextBox4.PromptText = "Ingrese página web.";
-            this.metroTextBox4.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox4.SelectedText = "";
-            this.metroTextBox4.SelectionLength = 0;
-            this.metroTextBox4.SelectionStart = 0;
-            this.metroTextBox4.ShortcutsEnabled = true;
-            this.metroTextBox4.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox4.TabIndex = 5;
-            this.metroTextBox4.UseSelectable = true;
-            this.metroTextBox4.WaterMark = "Ingrese página web.";
-            this.metroTextBox4.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox4.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // EmailTextBox
             // 
-            // metroTextBox3
+            this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
+            this.EmailTextBox.CustomButton.Image = null;
+            this.EmailTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.EmailTextBox.CustomButton.Name = "";
+            this.EmailTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.EmailTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.EmailTextBox.CustomButton.TabIndex = 1;
+            this.EmailTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.EmailTextBox.CustomButton.UseSelectable = true;
+            this.EmailTextBox.CustomButton.Visible = false;
+            this.EmailTextBox.Lines = new string[0];
+            this.EmailTextBox.Location = new System.Drawing.Point(584, 62);
+            this.EmailTextBox.MaxLength = 32767;
+            this.EmailTextBox.Name = "EmailTextBox";
+            this.EmailTextBox.PasswordChar = '\0';
+            this.EmailTextBox.PromptText = "Ingrese el correo electrónico.";
+            this.EmailTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.EmailTextBox.SelectedText = "";
+            this.EmailTextBox.SelectionLength = 0;
+            this.EmailTextBox.SelectionStart = 0;
+            this.EmailTextBox.ShortcutsEnabled = true;
+            this.EmailTextBox.Size = new System.Drawing.Size(167, 25);
+            this.EmailTextBox.TabIndex = 5;
+            this.EmailTextBox.UseSelectable = true;
+            this.EmailTextBox.WaterMark = "Ingrese el correo electrónico.";
+            this.EmailTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.EmailTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(212, 97);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.PromptText = "Ingrese el cédula jurídica.";
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox3.TabIndex = 5;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMark = "Ingrese el cédula jurídica.";
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // WebPageTextBox
             // 
-            // metroTextBox2
+            this.WebPageTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
+            this.WebPageTextBox.CustomButton.Image = null;
+            this.WebPageTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.WebPageTextBox.CustomButton.Name = "";
+            this.WebPageTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.WebPageTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.WebPageTextBox.CustomButton.TabIndex = 1;
+            this.WebPageTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.WebPageTextBox.CustomButton.UseSelectable = true;
+            this.WebPageTextBox.CustomButton.Visible = false;
+            this.WebPageTextBox.Lines = new string[0];
+            this.WebPageTextBox.Location = new System.Drawing.Point(584, 97);
+            this.WebPageTextBox.MaxLength = 32767;
+            this.WebPageTextBox.Name = "WebPageTextBox";
+            this.WebPageTextBox.PasswordChar = '\0';
+            this.WebPageTextBox.PromptText = "Ingrese la página web.";
+            this.WebPageTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.WebPageTextBox.SelectedText = "";
+            this.WebPageTextBox.SelectionLength = 0;
+            this.WebPageTextBox.SelectionStart = 0;
+            this.WebPageTextBox.ShortcutsEnabled = true;
+            this.WebPageTextBox.Size = new System.Drawing.Size(167, 25);
+            this.WebPageTextBox.TabIndex = 5;
+            this.WebPageTextBox.UseSelectable = true;
+            this.WebPageTextBox.WaterMark = "Ingrese la página web.";
+            this.WebPageTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.WebPageTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(212, 62);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.PromptText = "Ingrese el apellido del cliente.";
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox2.TabIndex = 5;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMark = "Ingrese el apellido del cliente.";
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // metroTextBox1
+            // TelephoneTextBox
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(212, 27);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Ingrese el nombre del cliente.";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox1.TabIndex = 5;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Ingrese el nombre del cliente.";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TelephoneTextBox.CustomButton.Image = null;
+            this.TelephoneTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.TelephoneTextBox.CustomButton.Name = "";
+            this.TelephoneTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.TelephoneTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TelephoneTextBox.CustomButton.TabIndex = 1;
+            this.TelephoneTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TelephoneTextBox.CustomButton.UseSelectable = true;
+            this.TelephoneTextBox.CustomButton.Visible = false;
+            this.TelephoneTextBox.Lines = new string[0];
+            this.TelephoneTextBox.Location = new System.Drawing.Point(584, 27);
+            this.TelephoneTextBox.MaxLength = 32767;
+            this.TelephoneTextBox.Name = "TelephoneTextBox";
+            this.TelephoneTextBox.PasswordChar = '\0';
+            this.TelephoneTextBox.PromptText = "Ingrese el número telefónico.";
+            this.TelephoneTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TelephoneTextBox.SelectedText = "";
+            this.TelephoneTextBox.SelectionLength = 0;
+            this.TelephoneTextBox.SelectionStart = 0;
+            this.TelephoneTextBox.ShortcutsEnabled = true;
+            this.TelephoneTextBox.Size = new System.Drawing.Size(167, 25);
+            this.TelephoneTextBox.TabIndex = 5;
+            this.TelephoneTextBox.UseSelectable = true;
+            this.TelephoneTextBox.WaterMark = "Ingrese el número telefónico.";
+            this.TelephoneTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TelephoneTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // button2
+            // LegalDocumentTextBox
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(954, 606);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(107, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Guardar";
-            this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(1067, 606);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(107, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            this.LegalDocumentTextBox.CustomButton.Image = null;
+            this.LegalDocumentTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.LegalDocumentTextBox.CustomButton.Name = "";
+            this.LegalDocumentTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.LegalDocumentTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.LegalDocumentTextBox.CustomButton.TabIndex = 1;
+            this.LegalDocumentTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.LegalDocumentTextBox.CustomButton.UseSelectable = true;
+            this.LegalDocumentTextBox.CustomButton.Visible = false;
+            this.LegalDocumentTextBox.Lines = new string[0];
+            this.LegalDocumentTextBox.Location = new System.Drawing.Point(212, 97);
+            this.LegalDocumentTextBox.MaxLength = 32767;
+            this.LegalDocumentTextBox.Name = "LegalDocumentTextBox";
+            this.LegalDocumentTextBox.PasswordChar = '\0';
+            this.LegalDocumentTextBox.PromptText = "Ingrese la cédula jurídica.";
+            this.LegalDocumentTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.LegalDocumentTextBox.SelectedText = "";
+            this.LegalDocumentTextBox.SelectionLength = 0;
+            this.LegalDocumentTextBox.SelectionStart = 0;
+            this.LegalDocumentTextBox.ShortcutsEnabled = true;
+            this.LegalDocumentTextBox.Size = new System.Drawing.Size(167, 25);
+            this.LegalDocumentTextBox.TabIndex = 5;
+            this.LegalDocumentTextBox.UseSelectable = true;
+            this.LegalDocumentTextBox.WaterMark = "Ingrese la cédula jurídica.";
+            this.LegalDocumentTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.LegalDocumentTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(841, 606);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(107, 23);
-            this.button4.TabIndex = 8;
-            this.button4.Text = "Nuevo";
-            this.button4.UseVisualStyleBackColor = true;
+            // AddressTextBox
             // 
-            // button5
+            this.AddressTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             // 
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1180, 606);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(107, 23);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Eliminar";
-            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // 
+            this.AddressTextBox.CustomButton.Image = null;
+            this.AddressTextBox.CustomButton.Location = new System.Drawing.Point(149, 2);
+            this.AddressTextBox.CustomButton.Name = "";
+            this.AddressTextBox.CustomButton.Size = new System.Drawing.Size(67, 67);
+            this.AddressTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.AddressTextBox.CustomButton.TabIndex = 1;
+            this.AddressTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.AddressTextBox.CustomButton.UseSelectable = true;
+            this.AddressTextBox.CustomButton.Visible = false;
+            this.AddressTextBox.Lines = new string[0];
+            this.AddressTextBox.Location = new System.Drawing.Point(789, 50);
+            this.AddressTextBox.MaxLength = 32767;
+            this.AddressTextBox.Multiline = true;
+            this.AddressTextBox.Name = "AddressTextBox";
+            this.AddressTextBox.PasswordChar = '\0';
+            this.AddressTextBox.PromptText = "Ingrese la dirección.";
+            this.AddressTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AddressTextBox.SelectedText = "";
+            this.AddressTextBox.SelectionLength = 0;
+            this.AddressTextBox.SelectionStart = 0;
+            this.AddressTextBox.ShortcutsEnabled = true;
+            this.AddressTextBox.Size = new System.Drawing.Size(219, 72);
+            this.AddressTextBox.TabIndex = 5;
+            this.AddressTextBox.UseSelectable = true;
+            this.AddressTextBox.WaterMark = "Ingrese la dirección.";
+            this.AddressTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AddressTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // SocietyNameTextBox
+            // 
+            // 
+            // 
+            // 
+            this.SocietyNameTextBox.CustomButton.Image = null;
+            this.SocietyNameTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.SocietyNameTextBox.CustomButton.Name = "";
+            this.SocietyNameTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.SocietyNameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.SocietyNameTextBox.CustomButton.TabIndex = 1;
+            this.SocietyNameTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.SocietyNameTextBox.CustomButton.UseSelectable = true;
+            this.SocietyNameTextBox.CustomButton.Visible = false;
+            this.SocietyNameTextBox.Lines = new string[0];
+            this.SocietyNameTextBox.Location = new System.Drawing.Point(212, 62);
+            this.SocietyNameTextBox.MaxLength = 32767;
+            this.SocietyNameTextBox.Name = "SocietyNameTextBox";
+            this.SocietyNameTextBox.PasswordChar = '\0';
+            this.SocietyNameTextBox.PromptText = "Ingrese el nombre de sociedad.";
+            this.SocietyNameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SocietyNameTextBox.SelectedText = "";
+            this.SocietyNameTextBox.SelectionLength = 0;
+            this.SocietyNameTextBox.SelectionStart = 0;
+            this.SocietyNameTextBox.ShortcutsEnabled = true;
+            this.SocietyNameTextBox.Size = new System.Drawing.Size(167, 25);
+            this.SocietyNameTextBox.TabIndex = 5;
+            this.SocietyNameTextBox.UseSelectable = true;
+            this.SocietyNameTextBox.WaterMark = "Ingrese el nombre de sociedad.";
+            this.SocietyNameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.SocietyNameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // NameTextBox
+            // 
+            // 
+            // 
+            // 
+            this.NameTextBox.CustomButton.Image = null;
+            this.NameTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.NameTextBox.CustomButton.Name = "";
+            this.NameTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.NameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.NameTextBox.CustomButton.TabIndex = 1;
+            this.NameTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.NameTextBox.CustomButton.UseSelectable = true;
+            this.NameTextBox.CustomButton.Visible = false;
+            this.NameTextBox.Lines = new string[0];
+            this.NameTextBox.Location = new System.Drawing.Point(212, 27);
+            this.NameTextBox.MaxLength = 32767;
+            this.NameTextBox.Name = "NameTextBox";
+            this.NameTextBox.PasswordChar = '\0';
+            this.NameTextBox.PromptText = "Ingrese el nombre del negocio.";
+            this.NameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.NameTextBox.SelectedText = "";
+            this.NameTextBox.SelectionLength = 0;
+            this.NameTextBox.SelectionStart = 0;
+            this.NameTextBox.ShortcutsEnabled = true;
+            this.NameTextBox.Size = new System.Drawing.Size(167, 25);
+            this.NameTextBox.TabIndex = 5;
+            this.NameTextBox.UseSelectable = true;
+            this.NameTextBox.WaterMark = "Ingrese el nombre del negocio.";
+            this.NameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // label5
+            // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(402, 62);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 20);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "    Correo electrónico";
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(1119, 14);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 20);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "    Logo";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
+            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label8.Location = new System.Drawing.Point(785, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 20);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "    Dirección ";
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateButton.Location = new System.Drawing.Point(1067, 606);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(107, 23);
+            this.UpdateButton.TabIndex = 8;
+            this.UpdateButton.Text = "Modificar";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // CleanButton
+            // 
+            this.CleanButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CleanButton.Image = ((System.Drawing.Image)(resources.GetObject("CleanButton.Image")));
+            this.CleanButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CleanButton.Location = new System.Drawing.Point(1180, 606);
+            this.CleanButton.Name = "CleanButton";
+            this.CleanButton.Size = new System.Drawing.Size(107, 23);
+            this.CleanButton.TabIndex = 8;
+            this.CleanButton.Text = "Limpiar";
+            this.CleanButton.UseVisualStyleBackColor = true;
+            this.CleanButton.Click += new System.EventHandler(this.CleanButton_Click);
             // 
             // dataGridView1
             // 
@@ -347,220 +482,61 @@
             this.dataGridView1.Size = new System.Drawing.Size(1284, 357);
             this.dataGridView1.TabIndex = 4;
             // 
-            // metroTextBox6
+            // SearchButton
             // 
-            this.metroTextBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.metroTextBox6.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.metroTextBox6.CustomButton.Location = new System.Drawing.Point(173, 1);
-            this.metroTextBox6.CustomButton.Name = "";
-            this.metroTextBox6.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox6.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox6.CustomButton.TabIndex = 1;
-            this.metroTextBox6.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox6.CustomButton.UseSelectable = true;
-            this.metroTextBox6.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.metroTextBox6.Lines = new string[0];
-            this.metroTextBox6.Location = new System.Drawing.Point(1092, 214);
-            this.metroTextBox6.MaxLength = 32767;
-            this.metroTextBox6.Name = "metroTextBox6";
-            this.metroTextBox6.PasswordChar = '\0';
-            this.metroTextBox6.PromptText = "Ingrese el nombre del cliente.";
-            this.metroTextBox6.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox6.SelectedText = "";
-            this.metroTextBox6.SelectionLength = 0;
-            this.metroTextBox6.SelectionStart = 0;
-            this.metroTextBox6.ShortcutsEnabled = true;
-            this.metroTextBox6.ShowButton = true;
-            this.metroTextBox6.ShowClearButton = true;
-            this.metroTextBox6.Size = new System.Drawing.Size(195, 23);
-            this.metroTextBox6.TabIndex = 5;
-            this.metroTextBox6.UseSelectable = true;
-            this.metroTextBox6.WaterMark = "Ingrese el nombre del cliente.";
-            this.metroTextBox6.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox6.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Image = ((System.Drawing.Image)(resources.GetObject("label9.Image")));
-            this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(22, 97);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(133, 20);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "    Cédula Jurídica";
-            // 
-            // metroTextBox7
+            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            // 
-            this.metroTextBox7.CustomButton.Image = null;
-            this.metroTextBox7.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox7.CustomButton.Name = "";
-            this.metroTextBox7.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox7.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox7.CustomButton.TabIndex = 1;
-            this.metroTextBox7.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox7.CustomButton.UseSelectable = true;
-            this.metroTextBox7.CustomButton.Visible = false;
-            this.metroTextBox7.Lines = new string[0];
-            this.metroTextBox7.Location = new System.Drawing.Point(584, 27);
-            this.metroTextBox7.MaxLength = 32767;
-            this.metroTextBox7.Name = "metroTextBox7";
-            this.metroTextBox7.PasswordChar = '\0';
-            this.metroTextBox7.PromptText = "Ingrese el número telefónico.";
-            this.metroTextBox7.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox7.SelectedText = "";
-            this.metroTextBox7.SelectionLength = 0;
-            this.metroTextBox7.SelectionStart = 0;
-            this.metroTextBox7.ShortcutsEnabled = true;
-            this.metroTextBox7.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox7.TabIndex = 5;
-            this.metroTextBox7.UseSelectable = true;
-            this.metroTextBox7.WaterMark = "Ingrese el número telefónico.";
-            this.metroTextBox7.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox7.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
-            this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(785, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(95, 20);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "    Dirección ";
-            // 
-            // metroTextBox8
-            // 
-            this.metroTextBox8.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            // 
-            // 
-            // 
-            this.metroTextBox8.CustomButton.Image = null;
-            this.metroTextBox8.CustomButton.Location = new System.Drawing.Point(149, 2);
-            this.metroTextBox8.CustomButton.Name = "";
-            this.metroTextBox8.CustomButton.Size = new System.Drawing.Size(67, 67);
-            this.metroTextBox8.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox8.CustomButton.TabIndex = 1;
-            this.metroTextBox8.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox8.CustomButton.UseSelectable = true;
-            this.metroTextBox8.CustomButton.Visible = false;
-            this.metroTextBox8.Lines = new string[0];
-            this.metroTextBox8.Location = new System.Drawing.Point(789, 50);
-            this.metroTextBox8.MaxLength = 32767;
-            this.metroTextBox8.Multiline = true;
-            this.metroTextBox8.Name = "metroTextBox8";
-            this.metroTextBox8.PasswordChar = '\0';
-            this.metroTextBox8.PromptText = "Ingrese la dirección.";
-            this.metroTextBox8.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox8.SelectedText = "";
-            this.metroTextBox8.SelectionLength = 0;
-            this.metroTextBox8.SelectionStart = 0;
-            this.metroTextBox8.ShortcutsEnabled = true;
-            this.metroTextBox8.Size = new System.Drawing.Size(219, 72);
-            this.metroTextBox8.TabIndex = 5;
-            this.metroTextBox8.UseSelectable = true;
-            this.metroTextBox8.WaterMark = "Ingrese la dirección.";
-            this.metroTextBox8.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox8.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label5
-            // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Image = ((System.Drawing.Image)(resources.GetObject("label5.Image")));
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(402, 62);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 20);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "    Correo electrónico";
-            // 
-            // metroTextBox5
-            // 
-            this.metroTextBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.metroTextBox5.CustomButton.Image = null;
-            this.metroTextBox5.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox5.CustomButton.Name = "";
-            this.metroTextBox5.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox5.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox5.CustomButton.TabIndex = 1;
-            this.metroTextBox5.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox5.CustomButton.UseSelectable = true;
-            this.metroTextBox5.CustomButton.Visible = false;
-            this.metroTextBox5.Lines = new string[0];
-            this.metroTextBox5.Location = new System.Drawing.Point(584, 62);
-            this.metroTextBox5.MaxLength = 32767;
-            this.metroTextBox5.Name = "metroTextBox5";
-            this.metroTextBox5.PasswordChar = '\0';
-            this.metroTextBox5.PromptText = "Ingrese el correo electrónico.";
-            this.metroTextBox5.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox5.SelectedText = "";
-            this.metroTextBox5.SelectionLength = 0;
-            this.metroTextBox5.SelectionStart = 0;
-            this.metroTextBox5.ShortcutsEnabled = true;
-            this.metroTextBox5.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox5.TabIndex = 5;
-            this.metroTextBox5.UseSelectable = true;
-            this.metroTextBox5.WaterMark = "Ingrese el correo electrónico.";
-            this.metroTextBox5.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox5.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Image = ((System.Drawing.Image)(resources.GetObject("label7.Image")));
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(1119, 14);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 20);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "    Logo";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(1049, 37);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(214, 100);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
+            this.SearchButton.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.SearchButton.CustomButton.Location = new System.Drawing.Point(173, 1);
+            this.SearchButton.CustomButton.Name = "";
+            this.SearchButton.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.SearchButton.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.SearchButton.CustomButton.TabIndex = 1;
+            this.SearchButton.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.SearchButton.CustomButton.UseSelectable = true;
+            this.SearchButton.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.SearchButton.Lines = new string[0];
+            this.SearchButton.Location = new System.Drawing.Point(1092, 214);
+            this.SearchButton.MaxLength = 32767;
+            this.SearchButton.Name = "SearchButton";
+            this.SearchButton.PasswordChar = '\0';
+            this.SearchButton.PromptText = "Ingrese el nombre del cliente.";
+            this.SearchButton.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SearchButton.SelectedText = "";
+            this.SearchButton.SelectionLength = 0;
+            this.SearchButton.SelectionStart = 0;
+            this.SearchButton.ShortcutsEnabled = true;
+            this.SearchButton.ShowButton = true;
+            this.SearchButton.ShowClearButton = true;
+            this.SearchButton.Size = new System.Drawing.Size(195, 23);
+            this.SearchButton.TabIndex = 5;
+            this.SearchButton.UseSelectable = true;
+            this.SearchButton.WaterMark = "Ingrese el nombre del cliente.";
+            this.SearchButton.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.SearchButton.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchButton.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.SearchButton_ButtonClick);
             // 
             // UcBusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.CleanButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.metroTextBox6);
+            this.Controls.Add(this.SearchButton);
             this.Name = "UcBusiness";
             this.Size = new System.Drawing.Size(1294, 639);
+            this.Load += new System.EventHandler(this.UcBusiness_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,23 +551,21 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox4;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private MetroFramework.Controls.MetroTextBox WebPageTextBox;
+        private MetroFramework.Controls.MetroTextBox LegalDocumentTextBox;
+        private MetroFramework.Controls.MetroTextBox SocietyNameTextBox;
+        private MetroFramework.Controls.MetroTextBox NameTextBox;
+        private System.Windows.Forms.Button CleanButton;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox6;
+        private MetroFramework.Controls.MetroTextBox SearchButton;
         private System.Windows.Forms.Label label9;
-        private MetroFramework.Controls.MetroTextBox metroTextBox7;
-        private MetroFramework.Controls.MetroTextBox metroTextBox5;
-        private MetroFramework.Controls.MetroTextBox metroTextBox8;
+        private MetroFramework.Controls.MetroTextBox TelephoneTextBox;
+        private MetroFramework.Controls.MetroTextBox EmailTextBox;
+        private MetroFramework.Controls.MetroTextBox AddressTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox LogoPictureBox;
         private System.Windows.Forms.Label label7;
     }
 }

@@ -44,6 +44,12 @@ namespace UI
             }
         }
 
+        public ToolStripStatusLabel ToolStripLabel
+        {
+            get { return toolStripStatusLabel1; }
+            set { toolStripStatusLabel1 = value; }
+        }
+
         public Panel DraggablePanelColor
         {
             get { return DraggablePanel; }

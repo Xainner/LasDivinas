@@ -12,10 +12,26 @@ namespace POSSystemLibrary.SQLiteDataBase
 {
     public static class ClientConnection
     {
+        //------------- CARGAR LA CONEXION ---------------
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
         private static string LoadConnectionString(string id = "default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
+
+        //------------- METODOS ACME DEL CLIENTE ------------------------
+
+        /// <summary>
+        /// Este metodo se encarga de insertar directamente en la base de datos los valores del cliente
+        /// </summary>
+        /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del cliente</param>
+        /// <returns>Devuelve verdadero si se agrega el cliente y si falla falso</returns>
 
         public static bool InsertClient(ClientModel clientModel)
         {
@@ -33,6 +49,12 @@ namespace POSSystemLibrary.SQLiteDataBase
             }
         }
 
+        /// <summary>
+        /// Este metodo se encarga de actualizar los valores en la base de datos del cliente por medio del ID
+        /// </summary>
+        /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del cliente</param>
+        /// <returns>Devuelve verdadero si se modifica el cliente y si falla falso</returns>
+
         public static bool UpdateClientById(ClientModel clientModel)
         {
             try
@@ -49,6 +71,12 @@ namespace POSSystemLibrary.SQLiteDataBase
                 throw;
             }
         }
+
+        /// <summary>
+        /// Este metodo se encarga de elimiar de la base de datos el cliente por medio del ID
+        /// </summary>
+        /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del cliente</param>
+        /// <returns>Devuelve verdadero si se elimino el cliente y si falla falso</returns>
 
         public static bool DeleteClientById(ClientModel clientModel)
         {

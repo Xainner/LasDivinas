@@ -65,3 +65,10 @@ C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.csproj.CoreCompil
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.exe
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.pdb
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\POSSystemLibrary.dll
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.dll
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\Dapper.dll
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\POSSystemLibrary.pdb
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.xml
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\Dapper.xml

@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcEmployee));
-            this.ModifyButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.NewButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.IdLabel = new System.Windows.Forms.Label();
             this.PhoneNumberTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -47,26 +45,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.AddButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.UpdateButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.CleanButton = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // ModifyButton
-            // 
-            this.ModifyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModifyButton.Image = ((System.Drawing.Image)(resources.GetObject("ModifyButton.Image")));
-            this.ModifyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ModifyButton.Location = new System.Drawing.Point(1067, 606);
-            this.ModifyButton.Name = "ModifyButton";
-            this.ModifyButton.Size = new System.Drawing.Size(107, 23);
-            this.ModifyButton.TabIndex = 14;
-            this.ModifyButton.Text = "Modificar";
-            this.ModifyButton.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
@@ -82,18 +70,6 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(1284, 357);
             this.dataGridView1.TabIndex = 12;
-            // 
-            // NewButton
-            // 
-            this.NewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.NewButton.Image = ((System.Drawing.Image)(resources.GetObject("NewButton.Image")));
-            this.NewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewButton.Location = new System.Drawing.Point(841, 606);
-            this.NewButton.Name = "NewButton";
-            this.NewButton.Size = new System.Drawing.Size(107, 23);
-            this.NewButton.TabIndex = 15;
-            this.NewButton.Text = "Nuevo";
-            this.NewButton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -362,18 +338,6 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // AddButton
-            // 
-            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddButton.Location = new System.Drawing.Point(954, 606);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(107, 23);
-            this.AddButton.TabIndex = 16;
-            this.AddButton.Text = "Agregar";
-            this.AddButton.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -418,6 +382,20 @@
             this.SearchTextBox.WaterMark = "Ingrese nombre del empleado.";
             this.SearchTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.SearchTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.SearchTextBox_ButtonClick);
+            // 
+            // UpdateButton
+            // 
+            this.UpdateButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.UpdateButton.Image = ((System.Drawing.Image)(resources.GetObject("UpdateButton.Image")));
+            this.UpdateButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UpdateButton.Location = new System.Drawing.Point(1067, 606);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(107, 23);
+            this.UpdateButton.TabIndex = 14;
+            this.UpdateButton.Text = "Modificar";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
             // 
             // DeleteButton
             // 
@@ -427,25 +405,53 @@
             this.DeleteButton.Location = new System.Drawing.Point(1180, 606);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(107, 23);
-            this.DeleteButton.TabIndex = 17;
+            this.DeleteButton.TabIndex = 15;
             this.DeleteButton.Text = "Eliminar";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // CleanButton
+            // 
+            this.CleanButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.CleanButton.Image = ((System.Drawing.Image)(resources.GetObject("CleanButton.Image")));
+            this.CleanButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.CleanButton.Location = new System.Drawing.Point(841, 606);
+            this.CleanButton.Name = "CleanButton";
+            this.CleanButton.Size = new System.Drawing.Size(107, 23);
+            this.CleanButton.TabIndex = 16;
+            this.CleanButton.Text = "Nuevo";
+            this.CleanButton.UseVisualStyleBackColor = true;
+            this.CleanButton.Click += new System.EventHandler(this.CleanButton_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.SaveButton.Image = ((System.Drawing.Image)(resources.GetObject("SaveButton.Image")));
+            this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveButton.Location = new System.Drawing.Point(954, 606);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(107, 23);
+            this.SaveButton.TabIndex = 17;
+            this.SaveButton.Text = "Guardar";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // UcEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.ModifyButton);
+            this.Controls.Add(this.CleanButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.NewButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
             this.Name = "UcEmployee";
             this.Size = new System.Drawing.Size(1294, 639);
+            this.Load += new System.EventHandler(this.UcEmployee_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -456,10 +462,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button ModifyButton;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label IdLabel;
         private MetroFramework.Controls.MetroTextBox PhoneNumberTextBox;
@@ -475,9 +478,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTextBox SearchTextBox;
+        private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button CleanButton;
+        private System.Windows.Forms.Button SaveButton;
     }
 }

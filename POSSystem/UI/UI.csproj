@@ -169,6 +169,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\POSSystemLibrary\POSSystemLibrary.csproj">
+      <Project>{0F1F728E-252F-46C2-8F22-00BDA7A69B25}</Project>
+      <Name>POSSystemLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

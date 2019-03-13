@@ -12,10 +12,26 @@ namespace POSSystemLibrary.SQLiteDataBase
 {
     public static class EmployeeConnection
     {
+        //------------- CARGAR LA CONEXION ---------------
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
         private static string LoadConnectionString(string id = "default")
         {
             return ConfigurationManager.ConnectionStrings[id].ConnectionString;
         }
+
+        //------------- METODOS ACME DE EMPLEADOS ------------------------
+
+        /// <summary>
+        /// Este metodo se encarga de insertar directamente en la base de datos los valores del empleado
+        /// </summary>
+        /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del empleado</param>
+        /// <returns>Devuelve verdadero si se agrega el empleado y si falla falso</returns>
 
         public static bool InsertEmployee(EmployeeModel employeeModel)
         {
@@ -33,6 +49,12 @@ namespace POSSystemLibrary.SQLiteDataBase
             }
         }
 
+        /// <summary>
+        /// Este metodo se encarga de actualizar los valores en la base de datos del empleado por medio del ID
+        /// </summary>
+        /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del empleado</param>
+        /// <returns>Devuelve verdadero si se modifica el empleado y si falla falso</returns>
+
         public static bool UpdateEmployeeById(EmployeeModel employeeModel)
         {
             try
@@ -49,6 +71,12 @@ namespace POSSystemLibrary.SQLiteDataBase
                 throw;
             }
         }
+
+        /// <summary>
+        /// Este metodo se encarga de elimiar de la base de datos el empleado por medio del ID
+        /// </summary>
+        /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del empleado</param>
+        /// <returns>Devuelve verdadero si se elimino el empleado y si falla falso</returns>
 
         public static bool DeleteClientById(EmployeeModel employeeModel)
         {

@@ -37,6 +37,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.IdLabel = new System.Windows.Forms.Label();
             this.EmailTextBox = new MetroFramework.Controls.MetroTextBox();
             this.PhoneNumberTextBox = new MetroFramework.Controls.MetroTextBox();
             this.IdentificationTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -46,13 +47,12 @@
             this.BornDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.ModifyButton = new System.Windows.Forms.Button();
-            this.NewButton = new System.Windows.Forms.Button();
-            this.DeleteButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.SearchTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.IdLabel = new System.Windows.Forms.Label();
+            this.ModifyButton = new System.Windows.Forms.Button();
+            this.DeleteButton = new System.Windows.Forms.Button();
+            this.NewButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -164,6 +164,16 @@
             this.groupBox1.Size = new System.Drawing.Size(1284, 143);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
+            // 
+            // IdLabel
+            // 
+            this.IdLabel.AutoSize = true;
+            this.IdLabel.Location = new System.Drawing.Point(1243, 127);
+            this.IdLabel.Name = "IdLabel";
+            this.IdLabel.Size = new System.Drawing.Size(31, 13);
+            this.IdLabel.TabIndex = 6;
+            this.IdLabel.Text = "none";
+            this.IdLabel.Visible = false;
             // 
             // EmailTextBox
             // 
@@ -373,58 +383,6 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "    Fecha de Nacimiento";
             // 
-            // AddButton
-            // 
-            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddButton.Location = new System.Drawing.Point(954, 606);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(107, 23);
-            this.AddButton.TabIndex = 8;
-            this.AddButton.Text = "Agregar";
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // ModifyButton
-            // 
-            this.ModifyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ModifyButton.Image = ((System.Drawing.Image)(resources.GetObject("ModifyButton.Image")));
-            this.ModifyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ModifyButton.Location = new System.Drawing.Point(1067, 606);
-            this.ModifyButton.Name = "ModifyButton";
-            this.ModifyButton.Size = new System.Drawing.Size(107, 23);
-            this.ModifyButton.TabIndex = 8;
-            this.ModifyButton.Text = "Modificar";
-            this.ModifyButton.UseVisualStyleBackColor = true;
-            this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click);
-            // 
-            // NewButton
-            // 
-            this.NewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.NewButton.Image = ((System.Drawing.Image)(resources.GetObject("NewButton.Image")));
-            this.NewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.NewButton.Location = new System.Drawing.Point(841, 606);
-            this.NewButton.Name = "NewButton";
-            this.NewButton.Size = new System.Drawing.Size(107, 23);
-            this.NewButton.TabIndex = 8;
-            this.NewButton.Text = "Nuevo";
-            this.NewButton.UseVisualStyleBackColor = true;
-            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
-            // 
-            // DeleteButton
-            // 
-            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
-            this.DeleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteButton.Location = new System.Drawing.Point(1180, 606);
-            this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(107, 23);
-            this.DeleteButton.TabIndex = 8;
-            this.DeleteButton.Text = "Eliminar";
-            this.DeleteButton.UseVisualStyleBackColor = true;
-            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -476,15 +434,57 @@
             this.SearchTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchTextBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.SearchTextBox_ButtonClick);
             // 
-            // IdLabel
+            // ModifyButton
             // 
-            this.IdLabel.AutoSize = true;
-            this.IdLabel.Location = new System.Drawing.Point(1243, 127);
-            this.IdLabel.Name = "IdLabel";
-            this.IdLabel.Size = new System.Drawing.Size(31, 13);
-            this.IdLabel.TabIndex = 6;
-            this.IdLabel.Text = "none";
-            this.IdLabel.Visible = false;
+            this.ModifyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ModifyButton.Image = ((System.Drawing.Image)(resources.GetObject("ModifyButton.Image")));
+            this.ModifyButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ModifyButton.Location = new System.Drawing.Point(1067, 606);
+            this.ModifyButton.Name = "ModifyButton";
+            this.ModifyButton.Size = new System.Drawing.Size(107, 23);
+            this.ModifyButton.TabIndex = 9;
+            this.ModifyButton.Text = "Modificar";
+            this.ModifyButton.UseVisualStyleBackColor = true;
+            this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click_1);
+            // 
+            // DeleteButton
+            // 
+            this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
+            this.DeleteButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteButton.Location = new System.Drawing.Point(1180, 606);
+            this.DeleteButton.Name = "DeleteButton";
+            this.DeleteButton.Size = new System.Drawing.Size(107, 23);
+            this.DeleteButton.TabIndex = 10;
+            this.DeleteButton.Text = "Eliminar";
+            this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click_1);
+            // 
+            // NewButton
+            // 
+            this.NewButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.NewButton.Image = ((System.Drawing.Image)(resources.GetObject("NewButton.Image")));
+            this.NewButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.NewButton.Location = new System.Drawing.Point(841, 606);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(107, 23);
+            this.NewButton.TabIndex = 11;
+            this.NewButton.Text = "Nuevo";
+            this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click_1);
+            // 
+            // AddButton
+            // 
+            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
+            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddButton.Location = new System.Drawing.Point(954, 606);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(107, 23);
+            this.AddButton.TabIndex = 12;
+            this.AddButton.Text = "Guardar";
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click_1);
             // 
             // UcClients
             // 
@@ -492,11 +492,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.ModifyButton);
             this.Controls.Add(this.DeleteButton);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.NewButton);
+            this.Controls.Add(this.AddButton);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.AddButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
             this.Name = "UcClients";
@@ -530,12 +530,12 @@
         private System.Windows.Forms.ComboBox IdTypeComboBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.Button DeleteButton;
-        private System.Windows.Forms.Button NewButton;
-        private System.Windows.Forms.Button ModifyButton;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroTextBox SearchTextBox;
         private System.Windows.Forms.Label IdLabel;
+        private System.Windows.Forms.Button ModifyButton;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button NewButton;
+        private System.Windows.Forms.Button AddButton;
     }
 }
