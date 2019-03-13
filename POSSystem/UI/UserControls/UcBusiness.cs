@@ -19,7 +19,7 @@ namespace UI.UserControls
 
         private void UcBusiness_Load(object sender, EventArgs e)
         {
-            BusinessDataGridView.DataSource = BusinessManagement.SelectAllBusiness();
+            //BusinessDataGridView.DataSource = BusinessManagement.SelectAllBusiness();
         }
 
         private void SearchButton_ButtonClick(object sender, EventArgs e)

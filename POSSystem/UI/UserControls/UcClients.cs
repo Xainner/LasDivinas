@@ -20,7 +20,7 @@ namespace UI.UserControls
 
         private void UcClients_Load(object sender, EventArgs e)
         {
-            ClientDataGridView.DataSource = ClientManagement.SelectAllClients();
+            //ClientDataGridView.DataSource = ClientManagement.SelectAllClients();
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)

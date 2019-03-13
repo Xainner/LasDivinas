@@ -19,7 +19,7 @@ namespace UI.UserControls
 
         private void UcEmployee_Load(object sender, EventArgs e)
         {
-            EmployeeDataGridView.DataSource = EmployeeManagement.SelectAllEmployees();
+            //EmployeeDataGridView.DataSource = EmployeeManagement.SelectAllEmployees();
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
