@@ -73,12 +73,38 @@ namespace POSSystemLibrary.SQLiteDataBase
         }
 
         /// <summary>
+        /// Este metodo se encarga de consultarle a la BD hacer de si cuenta con los valores del empleado
+        /// de acuerdo al texto ingresado, que sean similares al nombre, apellido o identificacion.
+        /// </summary>
+        /// <param name="employeeModel">Recibe el objeto empleado</param>
+        /// <returns>Devuelve la lista de empleados encontrados con similitudes en la DB</returns>
+
+        public static List<EmployeeModel> SelectMultipleEmployees(EmployeeModel employeeModel)
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    employeeModel.Name = $"%{ employeeModel.Name }%";
+                    employeeModel.LastName = $"%{ employeeModel.LastName }%";
+                    employeeModel.Identification = $"%{ employeeModel.Identification }%";
+                    var output = cnn.Query<EmployeeModel>("SELECT * FROM Tbl_Employee WHERE Name like @Name OR LastName like @LastName OR Identification like @Identification", employeeModel);
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Este metodo se encarga de elimiar de la base de datos el empleado por medio del ID
         /// </summary>
         /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del empleado</param>
         /// <returns>Devuelve verdadero si se elimino el empleado y si falla falso</returns>
 
-        public static bool DeleteClientById(EmployeeModel employeeModel)
+        public static bool DeleteEmployeeById(EmployeeModel employeeModel)
         {
             try
             {
@@ -91,6 +117,29 @@ namespace POSSystemLibrary.SQLiteDataBase
             catch (Exception ex)
             {
 
+                throw;
+            }
+        }
+
+        //------- OTROS TIPOS DE CONSULTAS A LA BASE DE DATOS ---------
+
+        /// <summary>
+        /// Este metodo se encarga de buscar todos los empleados guardados en la base de datos 
+        /// </summary>
+        /// <returns>Devuelve la lista de empleados encontrados en la DB</returns>
+
+        public static List<EmployeeModel> SelectAllEmployees()
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    var output = cnn.Query<EmployeeModel>("SELECT * FROM Tbl_Employee");
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
                 throw;
             }
         }

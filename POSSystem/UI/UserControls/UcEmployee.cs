@@ -19,12 +19,22 @@ namespace UI.UserControls
 
         private void UcEmployee_Load(object sender, EventArgs e)
         {
-
+            EmployeeDataGridView.DataSource = EmployeeManagement.SelectAllEmployees();
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(SearchTextBox.Text))
+            {
+                EmployeeDataGridView.DataSource = EmployeeManagement.SelectMultipleEmployees(SearchTextBox.Text);
 
+                FrmMain.Instance.ToolStripLabel.Text = "Lista de Empleados cargada correctamente.";
+                Clear();
+            }
+            else
+            {
+                FrmMain.Instance.ToolStripLabel.Text = "Error! El campo buscar no puede ser vacio.";
+            }
         }
 
         private void CleanButton_Click(object sender, EventArgs e)

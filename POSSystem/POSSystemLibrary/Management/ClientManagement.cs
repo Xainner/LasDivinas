@@ -10,7 +10,7 @@ namespace POSSystemLibrary.Management
     public static class ClientManagement
     {
 
-        //------- CLIENT ACCIONS CREATE, MODIFY, DELETE ---------
+        //------- METODOS DEL CLIENTE CREAR, MODIFICAR, CONSULTAR Y ELIMINAR ---------
 
         /// <summary>
         /// Este metodo se encarga de agregar los clientes
@@ -30,7 +30,7 @@ namespace POSSystemLibrary.Management
                 ClientModel clientModel = new ClientModel()
                 {
                     Name = name,
-                    Lastname = lastName,
+                    LastName = lastName,
                     Identification_Type = idType,
                     Email = email,
                     Identification = identification,
@@ -65,7 +65,7 @@ namespace POSSystemLibrary.Management
                 {
                     Id_Client = id,
                     Name = name,
-                    Lastname = lastName,
+                    LastName = lastName,
                     Identification_Type = idType,
                     Email = email,
                     Identification = identification,
@@ -76,6 +76,30 @@ namespace POSSystemLibrary.Management
             catch (Exception ex)
             {
                 throw;
+            }
+        }
+
+        /// <summary>
+        /// Este metodo se encarga de buscar un cliente por medio del texto ingresado
+        /// </summary>
+        /// <param name="text">Texto ingresado por el usuario, que puede ser el nombre, apellido o identificacion del cliente.</param>
+        /// <returns>Envia una peticion a la capa DB para ver si puede encontrar las similitudes del texto con los clientes.</returns>
+
+        public static List<ClientModel> SelectMultipleClients(string text)
+        {
+            try
+            {
+                ClientModel clientModel = new ClientModel()
+                {
+                    Name = text,
+                    LastName = text,
+                    Identification = text
+                };
+                return ClientConnection.SelectMultipleClients(clientModel);
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 
@@ -94,6 +118,25 @@ namespace POSSystemLibrary.Management
                     Id_Client = id
                 };
                 return ClientConnection.DeleteClientById(clientModel);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        //------- OTROS TIPOS DE CONSULTAS AL CLIENTE EN LA BASE DE DATOS ---------
+
+        /// <summary>
+        /// Metodo para consultar todos los clientes en la base de datos
+        /// </summary>
+        /// <returns>Envia una peticion a la capa DB para obtener todos los clientes en la DB</returns>
+
+        public static List<ClientModel> SelectAllClients()
+        {
+            try
+            {
+                return ClientConnection.SelectAllClients();
             }
             catch (Exception ex)
             {

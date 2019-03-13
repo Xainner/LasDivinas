@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcEmployee));
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.EmployeeDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.IdLabel = new System.Windows.Forms.Label();
             this.PhoneNumberTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -51,25 +51,25 @@
             this.DeleteButton = new System.Windows.Forms.Button();
             this.CleanButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // EmployeeDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.EmployeeDataGridView.AllowUserToAddRows = false;
+            this.EmployeeDataGridView.AllowUserToDeleteRows = false;
+            this.EmployeeDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1284, 357);
-            this.dataGridView1.TabIndex = 12;
+            this.EmployeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.EmployeeDataGridView.Location = new System.Drawing.Point(3, 243);
+            this.EmployeeDataGridView.Name = "EmployeeDataGridView";
+            this.EmployeeDataGridView.ReadOnly = true;
+            this.EmployeeDataGridView.RowHeadersVisible = false;
+            this.EmployeeDataGridView.Size = new System.Drawing.Size(1284, 357);
+            this.EmployeeDataGridView.TabIndex = 12;
             // 
             // groupBox1
             // 
@@ -444,7 +444,7 @@
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.CleanButton);
             this.Controls.Add(this.SaveButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.EmployeeDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -452,7 +452,7 @@
             this.Name = "UcEmployee";
             this.Size = new System.Drawing.Size(1294, 639);
             this.Load += new System.EventHandler(this.UcEmployee_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EmployeeDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -462,7 +462,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView EmployeeDataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label IdLabel;
         private MetroFramework.Controls.MetroTextBox PhoneNumberTextBox;

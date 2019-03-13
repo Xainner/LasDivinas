@@ -48,5 +48,54 @@ namespace POSSystemLibrary.SQLiteDataBase
             }
         }
 
+        /// <summary>
+        /// Este metodo se encarga de consultarle a la BD hacer de si cuenta con los valores del negocio
+        /// de acuerdo al texto ingresado, que sean similares al nombre, nombre de sociedad o cedula juridica.
+        /// </summary>
+        /// <param name="employeeModel">Recibe el objeto negocio</param>
+        /// <returns>Devuelve la lista de negocios encontrados con similitudes en la DB</returns>
+
+        public static List<BusinessModel> SelectMultipleBusiness(BusinessModel businessModel)
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    businessModel.Name = $"%{ businessModel.Name }%";
+                    businessModel.Society_Name = $"%{ businessModel.Society_Name }%";
+                    businessModel.LegalCertification = $"%{ businessModel.LegalCertification }%";
+                    var output = cnn.Query<BusinessModel>("SELECT * FROM Tbl_Business WHERE Name like @Name OR Society_Name like @Society_Name OR LegalCertification like @LegalCertification", businessModel);
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        //------- OTROS TIPOS DE CONSULTAS A LA BASE DE DATOS ---------
+
+        /// <summary>
+        /// Este metodo se encarga de buscar todos los negocios guardados en la base de datos 
+        /// </summary>
+        /// <returns>Devuelve la lista de negocios encontrados en la DB</returns>
+
+        public static List<BusinessModel> SelectAllBusinesses()
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    var output = cnn.Query<BusinessModel>("SELECT * FROM Tbl_Business");
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
     }
 }

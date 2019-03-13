@@ -47,7 +47,7 @@
             this.BornDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ClientDataGridView = new System.Windows.Forms.DataGridView();
             this.SearchTextBox = new MetroFramework.Controls.MetroTextBox();
             this.ModifyButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
@@ -55,7 +55,7 @@
             this.AddButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -383,20 +383,20 @@
             this.label8.TabIndex = 2;
             this.label8.Text = "    Fecha de Nacimiento";
             // 
-            // dataGridView1
+            // ClientDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ClientDataGridView.AllowUserToAddRows = false;
+            this.ClientDataGridView.AllowUserToDeleteRows = false;
+            this.ClientDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1284, 357);
-            this.dataGridView1.TabIndex = 4;
+            this.ClientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ClientDataGridView.Location = new System.Drawing.Point(3, 243);
+            this.ClientDataGridView.Name = "ClientDataGridView";
+            this.ClientDataGridView.ReadOnly = true;
+            this.ClientDataGridView.RowHeadersVisible = false;
+            this.ClientDataGridView.Size = new System.Drawing.Size(1284, 357);
+            this.ClientDataGridView.TabIndex = 4;
             // 
             // SearchTextBox
             // 
@@ -494,7 +494,7 @@
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.NewButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.ClientDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -505,7 +505,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ClientDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -530,7 +530,7 @@
         private System.Windows.Forms.ComboBox IdTypeComboBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView ClientDataGridView;
         private MetroFramework.Controls.MetroTextBox SearchTextBox;
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.Button ModifyButton;

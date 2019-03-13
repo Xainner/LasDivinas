@@ -50,12 +50,12 @@
             this.label8 = new System.Windows.Forms.Label();
             this.UpdateButton = new System.Windows.Forms.Button();
             this.CleanButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.SearchButton = new MetroFramework.Controls.MetroTextBox();
+            this.BusinessDataGridView = new System.Windows.Forms.DataGridView();
+            this.SearchTextBox = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BusinessDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -467,68 +467,68 @@
             this.CleanButton.UseVisualStyleBackColor = true;
             this.CleanButton.Click += new System.EventHandler(this.CleanButton_Click);
             // 
-            // dataGridView1
+            // BusinessDataGridView
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.BusinessDataGridView.AllowUserToAddRows = false;
+            this.BusinessDataGridView.AllowUserToDeleteRows = false;
+            this.BusinessDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 243);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1284, 357);
-            this.dataGridView1.TabIndex = 4;
+            this.BusinessDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.BusinessDataGridView.Location = new System.Drawing.Point(3, 243);
+            this.BusinessDataGridView.Name = "BusinessDataGridView";
+            this.BusinessDataGridView.ReadOnly = true;
+            this.BusinessDataGridView.RowHeadersVisible = false;
+            this.BusinessDataGridView.Size = new System.Drawing.Size(1284, 357);
+            this.BusinessDataGridView.TabIndex = 4;
             // 
-            // SearchButton
+            // SearchTextBox
             // 
-            this.SearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.SearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.SearchButton.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.SearchButton.CustomButton.Location = new System.Drawing.Point(173, 1);
-            this.SearchButton.CustomButton.Name = "";
-            this.SearchButton.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.SearchButton.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.SearchButton.CustomButton.TabIndex = 1;
-            this.SearchButton.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.SearchButton.CustomButton.UseSelectable = true;
-            this.SearchButton.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.SearchButton.Lines = new string[0];
-            this.SearchButton.Location = new System.Drawing.Point(1092, 214);
-            this.SearchButton.MaxLength = 32767;
-            this.SearchButton.Name = "SearchButton";
-            this.SearchButton.PasswordChar = '\0';
-            this.SearchButton.PromptText = "Ingrese el nombre del cliente.";
-            this.SearchButton.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.SearchButton.SelectedText = "";
-            this.SearchButton.SelectionLength = 0;
-            this.SearchButton.SelectionStart = 0;
-            this.SearchButton.ShortcutsEnabled = true;
-            this.SearchButton.ShowButton = true;
-            this.SearchButton.ShowClearButton = true;
-            this.SearchButton.Size = new System.Drawing.Size(195, 23);
-            this.SearchButton.TabIndex = 5;
-            this.SearchButton.UseSelectable = true;
-            this.SearchButton.WaterMark = "Ingrese el nombre del cliente.";
-            this.SearchButton.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.SearchButton.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchButton.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.SearchButton_ButtonClick);
+            this.SearchTextBox.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.SearchTextBox.CustomButton.Location = new System.Drawing.Point(173, 1);
+            this.SearchTextBox.CustomButton.Name = "";
+            this.SearchTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.SearchTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.SearchTextBox.CustomButton.TabIndex = 1;
+            this.SearchTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.SearchTextBox.CustomButton.UseSelectable = true;
+            this.SearchTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.SearchTextBox.Lines = new string[0];
+            this.SearchTextBox.Location = new System.Drawing.Point(1092, 214);
+            this.SearchTextBox.MaxLength = 32767;
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.PasswordChar = '\0';
+            this.SearchTextBox.PromptText = "Ingrese el nombre del cliente.";
+            this.SearchTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.SearchTextBox.SelectedText = "";
+            this.SearchTextBox.SelectionLength = 0;
+            this.SearchTextBox.SelectionStart = 0;
+            this.SearchTextBox.ShortcutsEnabled = true;
+            this.SearchTextBox.ShowButton = true;
+            this.SearchTextBox.ShowClearButton = true;
+            this.SearchTextBox.Size = new System.Drawing.Size(195, 23);
+            this.SearchTextBox.TabIndex = 5;
+            this.SearchTextBox.UseSelectable = true;
+            this.SearchTextBox.WaterMark = "Ingrese el nombre del cliente.";
+            this.SearchTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.SearchTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SearchTextBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.SearchButton_ButtonClick);
             // 
             // UcBusiness
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.UpdateButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.BusinessDataGridView);
             this.Controls.Add(this.CleanButton);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SearchButton);
+            this.Controls.Add(this.SearchTextBox);
             this.Name = "UcBusiness";
             this.Size = new System.Drawing.Size(1294, 639);
             this.Load += new System.EventHandler(this.UcBusiness_Load);
@@ -536,7 +536,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BusinessDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,8 +557,8 @@
         private MetroFramework.Controls.MetroTextBox NameTextBox;
         private System.Windows.Forms.Button CleanButton;
         private System.Windows.Forms.Button UpdateButton;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private MetroFramework.Controls.MetroTextBox SearchButton;
+        private System.Windows.Forms.DataGridView BusinessDataGridView;
+        private MetroFramework.Controls.MetroTextBox SearchTextBox;
         private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroTextBox TelephoneTextBox;
         private MetroFramework.Controls.MetroTextBox EmailTextBox;

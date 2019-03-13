@@ -73,6 +73,32 @@ namespace POSSystemLibrary.SQLiteDataBase
         }
 
         /// <summary>
+        /// Este metodo se encarga de consultarle a la BD hacer de si cuenta con los valores del cliente
+        /// de acuerdo al texto ingresado, que sean similares al nombre, apellido o identificacion.
+        /// </summary>
+        /// <param name="clientModel">Recibe el objeto cliente</param>
+        /// <returns>Devuelve la lista de clientes encontrados con similitudes en la DB</returns>
+
+        public static List<ClientModel> SelectMultipleClients(ClientModel clientModel)
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    clientModel.Name = $"%{ clientModel.Name }%";
+                    clientModel.LastName = $"%{ clientModel.LastName }%";
+                    clientModel.Identification = $"%{ clientModel.Identification }%";
+                    var output = cnn.Query<ClientModel>("SELECT * FROM Tbl_Client WHERE Name like @Name OR LastName like @LastName OR Identification like @Identification", clientModel);
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
         /// Este metodo se encarga de elimiar de la base de datos el cliente por medio del ID
         /// </summary>
         /// <param name="employeeModel">Recibe un objeto modelo para obtener los valores del cliente</param>
@@ -91,6 +117,29 @@ namespace POSSystemLibrary.SQLiteDataBase
             catch (Exception ex)
             {
 
+                throw;
+            }
+        }
+
+        //------- OTROS TIPOS DE CONSULTAS A LA BASE DE DATOS ---------
+
+        /// <summary>
+        /// Este metodo se encarga de buscar todos los clientes guardados en la base de datos 
+        /// </summary>
+        /// <returns>Devuelve la lista de clientes encontrados en la DB</returns>
+
+        public static List<ClientModel> SelectAllClients()
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    var output = cnn.Query<ClientModel>("SELECT * FROM Tbl_Client");
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
                 throw;
             }
         }

@@ -9,7 +9,7 @@ namespace POSSystemLibrary.Models
     {
         public int Id_Client { get; set; }
         public string Name { get; set; }
-        public string Lastname { get; set; }
+        public string LastName { get; set; }
         public string Identification_Type { get; set; }
         public string Identification { get; set; }
         public string Email { get; set; }

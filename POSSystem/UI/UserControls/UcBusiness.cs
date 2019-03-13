@@ -19,12 +19,22 @@ namespace UI.UserControls
 
         private void UcBusiness_Load(object sender, EventArgs e)
         {
-
+            BusinessDataGridView.DataSource = BusinessManagement.SelectAllBusiness();
         }
 
         private void SearchButton_ButtonClick(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(SearchTextBox.Text))
+            {
+                BusinessDataGridView.DataSource = BusinessManagement.SelectMultipleBusiness(SearchTextBox.Text);
 
+                FrmMain.Instance.ToolStripLabel.Text = "Lista de Negocios cargada correctamente.";
+                Clear();
+            }
+            else
+            {
+                FrmMain.Instance.ToolStripLabel.Text = "Error! El campo buscar no puede ser vacio.";
+            }
         }
 
         private void CleanButton_Click(object sender, EventArgs e)
@@ -74,7 +84,7 @@ namespace UI.UserControls
             WebPageTextBox.Text = string.Empty;
             AddressTextBox.Text = string.Empty;
             LogoPictureBox.Text = string.Empty;
-            SearchButton.Text = string.Empty;
+            SearchTextBox.Text = string.Empty;
         }
     }
 }

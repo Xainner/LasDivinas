@@ -1,4 +1,5 @@
 ﻿using POSSystemLibrary.Models;
+using POSSystemLibrary.SQLiteDataBase;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,7 +35,7 @@ namespace POSSystemLibrary.Management
                     Identification = identification,
                     Born_Date = bornDate
                 };
-                return true; //EmployeeConnection.InsertEmployee(employeeModel);
+                return EmployeeConnection.InsertEmployee(employeeModel);
             }
             catch (Exception ex)
             {
@@ -70,11 +71,35 @@ namespace POSSystemLibrary.Management
                     Identification = identification,
                     Born_Date = bornDate
                 };
-                return true; // EmployeeConnection.UpdateEmployeeById(clientModel);
+                return EmployeeConnection.UpdateEmployeeById(employeeModel);
             }
             catch (Exception ex)
             {
                 throw;
+            }
+        }
+
+        /// <summary>
+        /// Este metodo se encarga de buscar un empleado por medio del texto ingresado
+        /// </summary>
+        /// <param name="text">Texto ingresado por el usuario, que puede ser el nombre, apellido o identificacion del empleado.</param>
+        /// <returns>Envia una peticion a la capa DB para ver si puede encontrar las similitudes del texto con los empleado.</returns>
+
+        public static List<EmployeeModel> SelectMultipleEmployees(string text)
+        {
+            try
+            {
+                EmployeeModel employeeModel = new EmployeeModel()
+                {
+                    Name = text,
+                    LastName = text,
+                    Identification = text
+                };
+                return EmployeeConnection.SelectMultipleEmployees(employeeModel);
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
 
@@ -92,7 +117,27 @@ namespace POSSystemLibrary.Management
                 {
                     Id_Employee = id
                 };
-                return true; // EmployeeConnection.DeleteEmployeeyId(employeeModel);
+                return EmployeeConnection.DeleteEmployeeById(employeeModel);
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+
+        //------- OTROS TIPOS DE CONSULTAS A LOS EMPLEADOS EN LA BASE DE DATOS ---------
+
+        /// <summary>
+        /// Metodo para consultar todos los empleados en la base de datos
+        /// </summary>
+        /// <returns>Envia una peticion a la capa DB para obtener todos los empleados en la DB</returns>
+
+        public static List<EmployeeModel> SelectAllEmployees()
+        {
+            try
+            {
+                return EmployeeConnection.SelectAllEmployees();
             }
             catch (Exception ex)
             {

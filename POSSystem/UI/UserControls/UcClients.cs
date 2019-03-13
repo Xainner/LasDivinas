@@ -20,12 +20,22 @@ namespace UI.UserControls
 
         private void UcClients_Load(object sender, EventArgs e)
         {
-
+            ClientDataGridView.DataSource = ClientManagement.SelectAllClients();
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
         {
+            if (!string.IsNullOrEmpty(SearchTextBox.Text))
+            {
+                ClientDataGridView.DataSource = ClientManagement.SelectMultipleClients(SearchTextBox.Text);
 
+                FrmMain.Instance.ToolStripLabel.Text = "Lista de Clientes cargada correctamente.";
+                Clear();
+            }
+            else
+            {
+                FrmMain.Instance.ToolStripLabel.Text = "Error! El campo buscar no puede ser vacio.";
+            }
         }
 
         private void AddButton_Click_1(object sender, EventArgs e)
