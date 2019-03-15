@@ -72,3 +72,12 @@ C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\POSSystemLibrary.pdb
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.xml
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\Dapper.xml
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\POSSystemLibrary.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\Dapper.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\POSSystemLibrary.pdb
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.xml
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\bin\Debug\Dapper.xml
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.UserControls.UcEmployee.resources
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.UserControls.UcProduct.resources

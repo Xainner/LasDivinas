@@ -10,3 +10,15 @@ C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSys
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.csproj.CopyComplete
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.dll
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.pdb
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\POSSystemLibrary.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\POSSystemLibrary.pdb
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\Dapper.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\System.Data.SQLite.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\Dapper.xml
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\System.Data.SQLite.xml
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.csprojAssemblyReference.cache
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.csproj.CoreCompileInputs.cache
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.csproj.CopyComplete
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.dll
+C:\Users\Xainner\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.pdb
