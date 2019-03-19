@@ -47,7 +47,7 @@ namespace UI.UserControls
                     string name = NameTextBox.Text;
                     string lastName = LastNameTextBox.Text;
                     string phoneNumber = PhoneNumberTextBox.Text;
-                    string idType = IdTypeComboBox.SelectedValue.ToString();
+                    string idType = IdTypeComboBox.SelectedItem.ToString();
                     string identification = IdentificationTextBox.Text;
                     DateTime bornDate = BornDateTimePicker.Value;
                     string email = EmailTextBox.Text;
@@ -80,12 +80,12 @@ namespace UI.UserControls
                     string name = NameTextBox.Text;
                     string lastName = LastNameTextBox.Text;
                     string phoneNumber = PhoneNumberTextBox.Text;
-                    string idType = IdTypeComboBox.SelectedValue.ToString();
+                    //string idType = IdTypeComboBox.SelectedValue.ToString();
                     string identification = IdentificationTextBox.Text;
                     DateTime bornDate = BornDateTimePicker.Value;
                     string email = EmailTextBox.Text;
 
-                    if (ClientManagement.UpdateClientById(Id, name, lastName, idType, identification, email, bornDate))
+                    if (ClientManagement.UpdateClientById(Id, name, lastName, IdTypeComboBox.SelectedValue.ToString(), identification, email, bornDate))
                     {
                         FrmMain.Instance.ToolStripLabel.Text = "Se modifico el Cliente correctamente.";
                         Clear();

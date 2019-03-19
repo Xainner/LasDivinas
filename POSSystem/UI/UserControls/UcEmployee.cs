@@ -51,7 +51,7 @@ namespace UI.UserControls
                     string name = NameTextBox.Text;
                     string lastName = LastNameTextBox.Text;
                     string phoneNumber = PhoneNumberTextBox.Text;
-                    string idType = IdTypeComboBox.SelectedValue.ToString();
+                    string idType = IdTypeComboBox.SelectedItem.ToString();
                     string identification = IdentificationTextBox.Text;
                     DateTime bornDate = BornDateTimePicker.Value;
 
@@ -62,7 +62,7 @@ namespace UI.UserControls
                     }
                     else
                     {
-                        FrmMain.Instance.ToolStripLabel.Text = "Error! No se pudo Empleado el Cliente.";
+                        FrmMain.Instance.ToolStripLabel.Text = "Error! No se pudo agregar el Empleado.";
                     }
                 }
                 else

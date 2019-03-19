@@ -342,6 +342,11 @@
             this.IdTypeComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.IdTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.IdTypeComboBox.FormattingEnabled = true;
+            this.IdTypeComboBox.Items.AddRange(new object[] {
+            "Cédula",
+            "Pasaporte",
+            "Permiso de trabajo",
+            "Residencia"});
             this.IdTypeComboBox.Location = new System.Drawing.Point(669, 27);
             this.IdTypeComboBox.Name = "IdTypeComboBox";
             this.IdTypeComboBox.Size = new System.Drawing.Size(167, 28);
