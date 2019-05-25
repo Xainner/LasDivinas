@@ -39,7 +39,8 @@ namespace POSSystemLibrary.SQLiteDataBase
             {
                 using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
                 {
-                    cnn.Execute("INSERT INTO Tbl_Employee (Name, LastName, Telephone, Identification_Type, Identification, Born_Date) VALUES (@Name, @LastName, @Telephone, @Identification_Type, @Identification,  @Born_Date)", employeeModel);
+                    DateTime fecha = DateTime.Now;
+                    cnn.Execute("INSERT INTO Tbl_Employee (Name, LastName, Telephone, Identification_Type, Identification, Born_Date, Registration_Date) VALUES (@Name, @LastName, @Telephone, @Identification_Type, @Identification,  @Born_Date, @Registration_Date)", employeeModel);
                 }
                 return true;
             }

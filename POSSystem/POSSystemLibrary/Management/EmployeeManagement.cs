@@ -22,7 +22,7 @@ namespace POSSystemLibrary.Management
         /// <param name="bornDate">Fecha de nacimiento del empleado</param>
         /// <returns>Envia una peticion a la capa DB para ver si puede agregar el empleado</returns>
 
-        public static bool InsertEmployee(string name, string lastName, string phoneNumber, string idType, string identification, DateTime bornDate)
+        public static bool InsertEmployee(string name, string lastName, string phoneNumber, string idType, string identification, DateTime bornDate, DateTime fechaRegistro)
         {
             try
             {
@@ -33,7 +33,8 @@ namespace POSSystemLibrary.Management
                     Telephone = phoneNumber,
                     Identification_Type = idType,
                     Identification = identification,
-                    Born_Date = bornDate
+                    Born_Date = bornDate,
+                    Registration_Date = fechaRegistro
                 };
                 return EmployeeConnection.InsertEmployee(employeeModel);
             }

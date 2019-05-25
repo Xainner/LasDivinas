@@ -39,7 +39,7 @@ namespace POSSystemLibrary.SQLiteDataBase
             {
                 using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
                 {
-                    cnn.Execute("INSERT INTO Tbl_Client (Name, LastName, Identification_Type, Identification, Email, Born_Date) VALUES (@Name, @LastName, @identificationType, @Identification, @Email,  @Born_Date)", clientModel);
+                    cnn.Execute("INSERT INTO Tbl_Client (Name, LastName, Identification_Type, Identification, Email, Born_Date, Registration_Date) VALUES (@Name, @LastName, @Identification_Type, @Identification, @Email,  @Born_Date, @Registration_Date)", clientModel);
                 }
                 return true;
             }

@@ -19,7 +19,7 @@ namespace UI.UserControls
 
         private void UcEmployee_Load(object sender, EventArgs e)
         {
-            //EmployeeDataGridView.DataSource = EmployeeManagement.SelectAllEmployees();
+            EmployeeDataGridView.DataSource = EmployeeManagement.SelectAllEmployees();
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
@@ -54,8 +54,9 @@ namespace UI.UserControls
                     string idType = IdTypeComboBox.SelectedItem.ToString();
                     string identification = IdentificationTextBox.Text;
                     DateTime bornDate = BornDateTimePicker.Value;
+                    DateTime fecha = DateTime.Now;
 
-                    if (EmployeeManagement.InsertEmployee(name, lastName, phoneNumber, idType, identification, bornDate))
+                    if (EmployeeManagement.InsertEmployee(name, lastName, phoneNumber, idType, identification, bornDate, fecha))
                     {
                         FrmMain.Instance.ToolStripLabel.Text = "Se agrego el Empleado correctamente.";
                         Clear();

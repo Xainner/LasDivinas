@@ -65,9 +65,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EmployeeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.EmployeeDataGridView.Location = new System.Drawing.Point(3, 243);
+            this.EmployeeDataGridView.MultiSelect = false;
             this.EmployeeDataGridView.Name = "EmployeeDataGridView";
             this.EmployeeDataGridView.ReadOnly = true;
             this.EmployeeDataGridView.RowHeadersVisible = false;
+            this.EmployeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeDataGridView.Size = new System.Drawing.Size(1284, 357);
             this.EmployeeDataGridView.TabIndex = 12;
             // 

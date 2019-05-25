@@ -23,7 +23,7 @@ namespace POSSystemLibrary.Management
         /// <param name="bornDate">Fecha de nacimiento del Cliente</param>
         /// <returns>Envia una peticion a la capa DB para ver si puede agregar el cliente</returns>
 
-        public static bool InsertClient(string name, string lastName, string idType, string identification, string email, DateTime bornDate)
+        public static bool InsertClient(string name, string lastName, string idType, string identification, string email, DateTime bornDate, DateTime registrationDate)
         {
             try
             {
@@ -34,7 +34,8 @@ namespace POSSystemLibrary.Management
                     Identification_Type = idType,
                     Email = email,
                     Identification = identification,
-                    Born_Date = bornDate
+                    Born_Date = bornDate,
+                    Registration_Date = registrationDate
                 };
                 return ClientConnection.InsertClient(clientModel);
             }

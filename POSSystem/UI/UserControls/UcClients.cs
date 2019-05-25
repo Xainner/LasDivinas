@@ -20,7 +20,8 @@ namespace UI.UserControls
 
         private void UcClients_Load(object sender, EventArgs e)
         {
-            //ClientDataGridView.DataSource = ClientManagement.SelectAllClients();
+            ClientDataGridView.DataSource = ClientManagement.SelectAllClients();
+            
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
@@ -51,8 +52,9 @@ namespace UI.UserControls
                     string identification = IdentificationTextBox.Text;
                     DateTime bornDate = BornDateTimePicker.Value;
                     string email = EmailTextBox.Text;
+                    DateTime fecha = DateTime.Now;
 
-                    if (ClientManagement.InsertClient(name, lastName, idType, identification, email, bornDate))
+                    if (ClientManagement.InsertClient(name, lastName, idType, identification, email, bornDate, fecha))
                     {
                         FrmMain.Instance.ToolStripLabel.Text = "Se agrego el Cliente correctamente.";
                         Clear();
