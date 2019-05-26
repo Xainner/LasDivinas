@@ -33,15 +33,19 @@
             this.DeleteButton = new System.Windows.Forms.Button();
             this.NewButton = new System.Windows.Forms.Button();
             this.AddButton = new System.Windows.Forms.Button();
-            this.ClientDataGridView = new System.Windows.Forms.DataGridView();
+            this.ProductDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.EmailTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.ImgpictureBox = new System.Windows.Forms.PictureBox();
+            this.descriptionTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.PhoneNumberTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.IdentificationTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.LastNameTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.NameTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.categoryTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.priceTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.stockTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.brandTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.codeTextBox = new MetroFramework.Controls.MetroTextBox();
+            this.typeiviComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,13 +56,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.IdTypeComboBox = new System.Windows.Forms.ComboBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.ClientDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgpictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +73,7 @@
             this.ModifyButton.TabIndex = 18;
             this.ModifyButton.Text = "Modificar";
             this.ModifyButton.UseVisualStyleBackColor = true;
+            this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click);
             // 
             // DeleteButton
             // 
@@ -85,6 +86,7 @@
             this.DeleteButton.TabIndex = 19;
             this.DeleteButton.Text = "Eliminar";
             this.DeleteButton.UseVisualStyleBackColor = true;
+            this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
             // NewButton
             // 
@@ -97,6 +99,7 @@
             this.NewButton.TabIndex = 20;
             this.NewButton.Text = "Nuevo";
             this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
             // 
             // AddButton
             // 
@@ -109,37 +112,38 @@
             this.AddButton.TabIndex = 21;
             this.AddButton.Text = "Guardar";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
-            // ClientDataGridView
+            // ProductDataGridView
             // 
-            this.ClientDataGridView.AllowUserToAddRows = false;
-            this.ClientDataGridView.AllowUserToDeleteRows = false;
-            this.ClientDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ProductDataGridView.AllowUserToAddRows = false;
+            this.ProductDataGridView.AllowUserToDeleteRows = false;
+            this.ProductDataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ClientDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientDataGridView.Location = new System.Drawing.Point(1023, 95);
-            this.ClientDataGridView.Name = "ClientDataGridView";
-            this.ClientDataGridView.ReadOnly = true;
-            this.ClientDataGridView.RowHeadersVisible = false;
-            this.ClientDataGridView.Size = new System.Drawing.Size(266, 506);
-            this.ClientDataGridView.TabIndex = 16;
+            this.ProductDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductDataGridView.Location = new System.Drawing.Point(1023, 95);
+            this.ProductDataGridView.Name = "ProductDataGridView";
+            this.ProductDataGridView.ReadOnly = true;
+            this.ProductDataGridView.RowHeadersVisible = false;
+            this.ProductDataGridView.Size = new System.Drawing.Size(266, 506);
+            this.ProductDataGridView.TabIndex = 16;
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.pictureBox2);
-            this.groupBox1.Controls.Add(this.EmailTextBox);
+            this.groupBox1.Controls.Add(this.ImgpictureBox);
+            this.groupBox1.Controls.Add(this.descriptionTextBox);
             this.groupBox1.Controls.Add(this.button3);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.PhoneNumberTextBox);
-            this.groupBox1.Controls.Add(this.metroTextBox1);
-            this.groupBox1.Controls.Add(this.IdentificationTextBox);
-            this.groupBox1.Controls.Add(this.LastNameTextBox);
-            this.groupBox1.Controls.Add(this.NameTextBox);
-            this.groupBox1.Controls.Add(this.IdTypeComboBox);
+            this.groupBox1.Controls.Add(this.categoryTextBox);
+            this.groupBox1.Controls.Add(this.priceTextBox1);
+            this.groupBox1.Controls.Add(this.stockTextBox);
+            this.groupBox1.Controls.Add(this.brandTextBox);
+            this.groupBox1.Controls.Add(this.codeTextBox);
+            this.groupBox1.Controls.Add(this.typeiviComboBox);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label7);
@@ -153,48 +157,70 @@
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
             // 
-            // pictureBox2
+            // ImgpictureBox
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(385, 9);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(621, 467);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 6;
-            this.pictureBox2.TabStop = false;
+            this.ImgpictureBox.Location = new System.Drawing.Point(385, 9);
+            this.ImgpictureBox.Name = "ImgpictureBox";
+            this.ImgpictureBox.Size = new System.Drawing.Size(621, 467);
+            this.ImgpictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgpictureBox.TabIndex = 6;
+            this.ImgpictureBox.TabStop = false;
             // 
-            // EmailTextBox
+            // descriptionTextBox
             // 
-            this.EmailTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.descriptionTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             // 
             // 
             // 
-            this.EmailTextBox.CustomButton.Image = null;
-            this.EmailTextBox.CustomButton.Location = new System.Drawing.Point(41, 2);
-            this.EmailTextBox.CustomButton.Name = "";
-            this.EmailTextBox.CustomButton.Size = new System.Drawing.Size(123, 123);
-            this.EmailTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.EmailTextBox.CustomButton.TabIndex = 1;
-            this.EmailTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.EmailTextBox.CustomButton.UseSelectable = true;
-            this.EmailTextBox.CustomButton.Visible = false;
-            this.EmailTextBox.Lines = new string[0];
-            this.EmailTextBox.Location = new System.Drawing.Point(208, 397);
-            this.EmailTextBox.MaxLength = 32767;
-            this.EmailTextBox.Multiline = true;
-            this.EmailTextBox.Name = "EmailTextBox";
-            this.EmailTextBox.PasswordChar = '\0';
-            this.EmailTextBox.PromptText = "Ingrese la descripción del producto.";
-            this.EmailTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.EmailTextBox.SelectedText = "";
-            this.EmailTextBox.SelectionLength = 0;
-            this.EmailTextBox.SelectionStart = 0;
-            this.EmailTextBox.ShortcutsEnabled = true;
-            this.EmailTextBox.Size = new System.Drawing.Size(167, 128);
-            this.EmailTextBox.TabIndex = 5;
-            this.EmailTextBox.UseSelectable = true;
-            this.EmailTextBox.WaterMark = "Ingrese la descripción del producto.";
-            this.EmailTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.EmailTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.descriptionTextBox.CustomButton.Image = null;
+            this.descriptionTextBox.CustomButton.Location = new System.Drawing.Point(41, 2);
+            this.descriptionTextBox.CustomButton.Name = "";
+            this.descriptionTextBox.CustomButton.Size = new System.Drawing.Size(123, 123);
+            this.descriptionTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.descriptionTextBox.CustomButton.TabIndex = 1;
+            this.descriptionTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.descriptionTextBox.CustomButton.UseSelectable = true;
+            this.descriptionTextBox.CustomButton.Visible = false;
+            this.descriptionTextBox.Lines = new string[0];
+            this.descriptionTextBox.Location = new System.Drawing.Point(208, 397);
+            this.descriptionTextBox.MaxLength = 32767;
+            this.descriptionTextBox.Multiline = true;
+            this.descriptionTextBox.Name = "descriptionTextBox";
+            this.descriptionTextBox.PasswordChar = '\0';
+            this.descriptionTextBox.PromptText = "Ingrese la descripción del producto.";
+            this.descriptionTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.descriptionTextBox.SelectedText = "";
+            this.descriptionTextBox.SelectionLength = 0;
+            this.descriptionTextBox.SelectionStart = 0;
+            this.descriptionTextBox.ShortcutsEnabled = true;
+            this.descriptionTextBox.Size = new System.Drawing.Size(167, 128);
+            this.descriptionTextBox.TabIndex = 5;
+            this.descriptionTextBox.UseSelectable = true;
+            this.descriptionTextBox.WaterMark = "Ingrese la descripción del producto.";
+            this.descriptionTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.descriptionTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
+            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.Location = new System.Drawing.Point(653, 495);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(26, 23);
+            this.button3.TabIndex = 20;
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(717, 495);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(26, 23);
+            this.button1.TabIndex = 20;
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -207,134 +233,177 @@
             this.button2.TabIndex = 20;
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // PhoneNumberTextBox
+            // categoryTextBox
             // 
             // 
             // 
             // 
-            this.PhoneNumberTextBox.CustomButton.Image = null;
-            this.PhoneNumberTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.PhoneNumberTextBox.CustomButton.Name = "";
-            this.PhoneNumberTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.PhoneNumberTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.PhoneNumberTextBox.CustomButton.TabIndex = 1;
-            this.PhoneNumberTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.PhoneNumberTextBox.CustomButton.UseSelectable = true;
-            this.PhoneNumberTextBox.CustomButton.Visible = false;
-            this.PhoneNumberTextBox.Lines = new string[0];
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(208, 149);
-            this.PhoneNumberTextBox.MaxLength = 32767;
-            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
-            this.PhoneNumberTextBox.PasswordChar = '\0';
-            this.PhoneNumberTextBox.PromptText = "Ingrese la categoría.";
-            this.PhoneNumberTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.PhoneNumberTextBox.SelectedText = "";
-            this.PhoneNumberTextBox.SelectionLength = 0;
-            this.PhoneNumberTextBox.SelectionStart = 0;
-            this.PhoneNumberTextBox.ShortcutsEnabled = true;
-            this.PhoneNumberTextBox.Size = new System.Drawing.Size(167, 25);
-            this.PhoneNumberTextBox.TabIndex = 5;
-            this.PhoneNumberTextBox.UseSelectable = true;
-            this.PhoneNumberTextBox.WaterMark = "Ingrese la categoría.";
-            this.PhoneNumberTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.PhoneNumberTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoryTextBox.CustomButton.Image = null;
+            this.categoryTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.categoryTextBox.CustomButton.Name = "";
+            this.categoryTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.categoryTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.categoryTextBox.CustomButton.TabIndex = 1;
+            this.categoryTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.categoryTextBox.CustomButton.UseSelectable = true;
+            this.categoryTextBox.CustomButton.Visible = false;
+            this.categoryTextBox.Lines = new string[0];
+            this.categoryTextBox.Location = new System.Drawing.Point(208, 149);
+            this.categoryTextBox.MaxLength = 32767;
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.PasswordChar = '\0';
+            this.categoryTextBox.PromptText = "Ingrese la categoría.";
+            this.categoryTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.categoryTextBox.SelectedText = "";
+            this.categoryTextBox.SelectionLength = 0;
+            this.categoryTextBox.SelectionStart = 0;
+            this.categoryTextBox.ShortcutsEnabled = true;
+            this.categoryTextBox.Size = new System.Drawing.Size(167, 25);
+            this.categoryTextBox.TabIndex = 5;
+            this.categoryTextBox.UseSelectable = true;
+            this.categoryTextBox.WaterMark = "Ingrese la categoría.";
+            this.categoryTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.categoryTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // IdentificationTextBox
+            // priceTextBox1
             // 
-            this.IdentificationTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            // 
-            // 
-            // 
-            this.IdentificationTextBox.CustomButton.Image = null;
-            this.IdentificationTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.IdentificationTextBox.CustomButton.Name = "";
-            this.IdentificationTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.IdentificationTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.IdentificationTextBox.CustomButton.TabIndex = 1;
-            this.IdentificationTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.IdentificationTextBox.CustomButton.UseSelectable = true;
-            this.IdentificationTextBox.CustomButton.Visible = false;
-            this.IdentificationTextBox.Lines = new string[0];
-            this.IdentificationTextBox.Location = new System.Drawing.Point(208, 274);
-            this.IdentificationTextBox.MaxLength = 32767;
-            this.IdentificationTextBox.Name = "IdentificationTextBox";
-            this.IdentificationTextBox.PasswordChar = '\0';
-            this.IdentificationTextBox.PromptText = "Ingrese la identificación.";
-            this.IdentificationTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.IdentificationTextBox.SelectedText = "";
-            this.IdentificationTextBox.SelectionLength = 0;
-            this.IdentificationTextBox.SelectionStart = 0;
-            this.IdentificationTextBox.ShortcutsEnabled = true;
-            this.IdentificationTextBox.Size = new System.Drawing.Size(167, 25);
-            this.IdentificationTextBox.TabIndex = 5;
-            this.IdentificationTextBox.UseSelectable = true;
-            this.IdentificationTextBox.WaterMark = "Ingrese la identificación.";
-            this.IdentificationTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.IdentificationTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // LastNameTextBox
+            this.priceTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             // 
             // 
             // 
+            this.priceTextBox1.CustomButton.Image = null;
+            this.priceTextBox1.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.priceTextBox1.CustomButton.Name = "";
+            this.priceTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.priceTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.priceTextBox1.CustomButton.TabIndex = 1;
+            this.priceTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.priceTextBox1.CustomButton.UseSelectable = true;
+            this.priceTextBox1.CustomButton.Visible = false;
+            this.priceTextBox1.Lines = new string[0];
+            this.priceTextBox1.Location = new System.Drawing.Point(208, 335);
+            this.priceTextBox1.MaxLength = 32767;
+            this.priceTextBox1.Name = "priceTextBox1";
+            this.priceTextBox1.PasswordChar = '\0';
+            this.priceTextBox1.PromptText = "Ingrese la identificación.";
+            this.priceTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.priceTextBox1.SelectedText = "";
+            this.priceTextBox1.SelectionLength = 0;
+            this.priceTextBox1.SelectionStart = 0;
+            this.priceTextBox1.ShortcutsEnabled = true;
+            this.priceTextBox1.Size = new System.Drawing.Size(167, 25);
+            this.priceTextBox1.TabIndex = 5;
+            this.priceTextBox1.UseSelectable = true;
+            this.priceTextBox1.WaterMark = "Ingrese la identificación.";
+            this.priceTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.priceTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            this.LastNameTextBox.CustomButton.Image = null;
-            this.LastNameTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.LastNameTextBox.CustomButton.Name = "";
-            this.LastNameTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.LastNameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.LastNameTextBox.CustomButton.TabIndex = 1;
-            this.LastNameTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.LastNameTextBox.CustomButton.UseSelectable = true;
-            this.LastNameTextBox.CustomButton.Visible = false;
-            this.LastNameTextBox.Lines = new string[0];
-            this.LastNameTextBox.Location = new System.Drawing.Point(208, 88);
-            this.LastNameTextBox.MaxLength = 32767;
-            this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.PasswordChar = '\0';
-            this.LastNameTextBox.PromptText = "Ingrese la marca del producto.";
-            this.LastNameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.LastNameTextBox.SelectedText = "";
-            this.LastNameTextBox.SelectionLength = 0;
-            this.LastNameTextBox.SelectionStart = 0;
-            this.LastNameTextBox.ShortcutsEnabled = true;
-            this.LastNameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.LastNameTextBox.TabIndex = 5;
-            this.LastNameTextBox.UseSelectable = true;
-            this.LastNameTextBox.WaterMark = "Ingrese la marca del producto.";
-            this.LastNameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.LastNameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // stockTextBox
             // 
-            // NameTextBox
+            this.stockTextBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
             // 
             // 
             // 
+            this.stockTextBox.CustomButton.Image = null;
+            this.stockTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.stockTextBox.CustomButton.Name = "";
+            this.stockTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.stockTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.stockTextBox.CustomButton.TabIndex = 1;
+            this.stockTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.stockTextBox.CustomButton.UseSelectable = true;
+            this.stockTextBox.CustomButton.Visible = false;
+            this.stockTextBox.Lines = new string[0];
+            this.stockTextBox.Location = new System.Drawing.Point(208, 274);
+            this.stockTextBox.MaxLength = 32767;
+            this.stockTextBox.Name = "stockTextBox";
+            this.stockTextBox.PasswordChar = '\0';
+            this.stockTextBox.PromptText = "Ingrese la identificación.";
+            this.stockTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.stockTextBox.SelectedText = "";
+            this.stockTextBox.SelectionLength = 0;
+            this.stockTextBox.SelectionStart = 0;
+            this.stockTextBox.ShortcutsEnabled = true;
+            this.stockTextBox.Size = new System.Drawing.Size(167, 25);
+            this.stockTextBox.TabIndex = 5;
+            this.stockTextBox.UseSelectable = true;
+            this.stockTextBox.WaterMark = "Ingrese la identificación.";
+            this.stockTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.stockTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            this.NameTextBox.CustomButton.Image = null;
-            this.NameTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.NameTextBox.CustomButton.Name = "";
-            this.NameTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.NameTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.NameTextBox.CustomButton.TabIndex = 1;
-            this.NameTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.NameTextBox.CustomButton.UseSelectable = true;
-            this.NameTextBox.CustomButton.Visible = false;
-            this.NameTextBox.Lines = new string[0];
-            this.NameTextBox.Location = new System.Drawing.Point(208, 27);
-            this.NameTextBox.MaxLength = 32767;
-            this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.PasswordChar = '\0';
-            this.NameTextBox.PromptText = "Ingrese el código del producto.";
-            this.NameTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.NameTextBox.SelectedText = "";
-            this.NameTextBox.SelectionLength = 0;
-            this.NameTextBox.SelectionStart = 0;
-            this.NameTextBox.ShortcutsEnabled = true;
-            this.NameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.NameTextBox.TabIndex = 5;
-            this.NameTextBox.UseSelectable = true;
-            this.NameTextBox.WaterMark = "Ingrese el código del producto.";
-            this.NameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.NameTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // brandTextBox
+            // 
+            // 
+            // 
+            // 
+            this.brandTextBox.CustomButton.Image = null;
+            this.brandTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.brandTextBox.CustomButton.Name = "";
+            this.brandTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.brandTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.brandTextBox.CustomButton.TabIndex = 1;
+            this.brandTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.brandTextBox.CustomButton.UseSelectable = true;
+            this.brandTextBox.CustomButton.Visible = false;
+            this.brandTextBox.Lines = new string[0];
+            this.brandTextBox.Location = new System.Drawing.Point(208, 88);
+            this.brandTextBox.MaxLength = 32767;
+            this.brandTextBox.Name = "brandTextBox";
+            this.brandTextBox.PasswordChar = '\0';
+            this.brandTextBox.PromptText = "Ingrese la marca del producto.";
+            this.brandTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.brandTextBox.SelectedText = "";
+            this.brandTextBox.SelectionLength = 0;
+            this.brandTextBox.SelectionStart = 0;
+            this.brandTextBox.ShortcutsEnabled = true;
+            this.brandTextBox.Size = new System.Drawing.Size(167, 25);
+            this.brandTextBox.TabIndex = 5;
+            this.brandTextBox.UseSelectable = true;
+            this.brandTextBox.WaterMark = "Ingrese la marca del producto.";
+            this.brandTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.brandTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // codeTextBox
+            // 
+            // 
+            // 
+            // 
+            this.codeTextBox.CustomButton.Image = null;
+            this.codeTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
+            this.codeTextBox.CustomButton.Name = "";
+            this.codeTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.codeTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.codeTextBox.CustomButton.TabIndex = 1;
+            this.codeTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.codeTextBox.CustomButton.UseSelectable = true;
+            this.codeTextBox.CustomButton.Visible = false;
+            this.codeTextBox.Lines = new string[0];
+            this.codeTextBox.Location = new System.Drawing.Point(208, 27);
+            this.codeTextBox.MaxLength = 32767;
+            this.codeTextBox.Name = "codeTextBox";
+            this.codeTextBox.PasswordChar = '\0';
+            this.codeTextBox.PromptText = "Ingrese el código del producto.";
+            this.codeTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.codeTextBox.SelectedText = "";
+            this.codeTextBox.SelectionLength = 0;
+            this.codeTextBox.SelectionStart = 0;
+            this.codeTextBox.ShortcutsEnabled = true;
+            this.codeTextBox.Size = new System.Drawing.Size(167, 25);
+            this.codeTextBox.TabIndex = 5;
+            this.codeTextBox.UseSelectable = true;
+            this.codeTextBox.WaterMark = "Ingrese el código del producto.";
+            this.codeTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.codeTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // typeiviComboBox
+            // 
+            this.typeiviComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.typeiviComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.typeiviComboBox.FormattingEnabled = true;
+            this.typeiviComboBox.Location = new System.Drawing.Point(208, 210);
+            this.typeiviComboBox.Name = "typeiviComboBox";
+            this.typeiviComboBox.Size = new System.Drawing.Size(167, 28);
+            this.typeiviComboBox.TabIndex = 4;
             // 
             // label6
             // 
@@ -479,71 +548,6 @@
             this.SearchTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.SearchTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(717, 495);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(26, 23);
-            this.button1.TabIndex = 20;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(653, 495);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(26, 23);
-            this.button3.TabIndex = 20;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // IdTypeComboBox
-            // 
-            this.IdTypeComboBox.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.IdTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IdTypeComboBox.FormattingEnabled = true;
-            this.IdTypeComboBox.Location = new System.Drawing.Point(208, 210);
-            this.IdTypeComboBox.Name = "IdTypeComboBox";
-            this.IdTypeComboBox.Size = new System.Drawing.Size(167, 28);
-            this.IdTypeComboBox.TabIndex = 4;
-            // 
-            // metroTextBox1
-            // 
-            this.metroTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            // 
-            // 
-            // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(208, 335);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.PromptText = "Ingrese la identificación.";
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(167, 25);
-            this.metroTextBox1.TabIndex = 5;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMark = "Ingrese la identificación.";
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // UcProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -552,17 +556,18 @@
             this.Controls.Add(this.DeleteButton);
             this.Controls.Add(this.NewButton);
             this.Controls.Add(this.AddButton);
-            this.Controls.Add(this.ClientDataGridView);
+            this.Controls.Add(this.ProductDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SearchTextBox);
             this.Name = "UcProduct";
             this.Size = new System.Drawing.Size(1294, 639);
-            ((System.ComponentModel.ISupportInitialize)(this.ClientDataGridView)).EndInit();
+            this.Load += new System.EventHandler(this.UcProduct_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgpictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -575,13 +580,13 @@
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.DataGridView ClientDataGridView;
+        private System.Windows.Forms.DataGridView ProductDataGridView;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroTextBox EmailTextBox;
-        private MetroFramework.Controls.MetroTextBox PhoneNumberTextBox;
-        private MetroFramework.Controls.MetroTextBox IdentificationTextBox;
-        private MetroFramework.Controls.MetroTextBox LastNameTextBox;
-        private MetroFramework.Controls.MetroTextBox NameTextBox;
+        private MetroFramework.Controls.MetroTextBox descriptionTextBox;
+        private MetroFramework.Controls.MetroTextBox categoryTextBox;
+        private MetroFramework.Controls.MetroTextBox stockTextBox;
+        private MetroFramework.Controls.MetroTextBox brandTextBox;
+        private MetroFramework.Controls.MetroTextBox codeTextBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
@@ -592,11 +597,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTextBox SearchTextBox;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox ImgpictureBox;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private System.Windows.Forms.ComboBox IdTypeComboBox;
+        private MetroFramework.Controls.MetroTextBox priceTextBox1;
+        private System.Windows.Forms.ComboBox typeiviComboBox;
     }
 }
