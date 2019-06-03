@@ -72,6 +72,7 @@
             this.EmployeeDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.EmployeeDataGridView.Size = new System.Drawing.Size(1284, 357);
             this.EmployeeDataGridView.TabIndex = 12;
+            this.EmployeeDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.EmployeeDataGridView_CellClick);
             // 
             // groupBox1
             // 
@@ -104,7 +105,6 @@
             this.IdLabel.Size = new System.Drawing.Size(31, 13);
             this.IdLabel.TabIndex = 6;
             this.IdLabel.Text = "none";
-            this.IdLabel.Visible = false;
             // 
             // PhoneNumberTextBox
             // 
