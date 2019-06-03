@@ -213,7 +213,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="button4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="ProductButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADgAAAA4CAYAAACohjseAAAABGdBTUEAALGPC/xhBQAAAc9JREFUaEPt
         kz8vg1EUh8/EYBADn8BAqu1nEMLCIKwmo8QiYhFlIfGfoEhaiUGobpIGEx/AoOlSo4VIJULEoHLco7d5

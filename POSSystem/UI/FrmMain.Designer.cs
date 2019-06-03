@@ -39,7 +39,7 @@
             this.HomeButton = new System.Windows.Forms.Button();
             this.ClientsButton = new System.Windows.Forms.Button();
             this.EmployeesButton = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.ProductButton = new System.Windows.Forms.Button();
             this.BusinessButton = new System.Windows.Forms.Button();
             this.SettingsButton = new System.Windows.Forms.Button();
             this.AboutButton2 = new System.Windows.Forms.Button();
@@ -210,21 +210,22 @@
             this.EmployeesButton.UseVisualStyleBackColor = true;
             this.EmployeesButton.Click += new System.EventHandler(this.EmployeesButton_Click);
             // 
-            // button4
+            // ProductButton
             // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button4.Location = new System.Drawing.Point(213, 36);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(93, 78);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Productos";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.ProductButton.FlatAppearance.BorderSize = 0;
+            this.ProductButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ProductButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProductButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductButton.Image = ((System.Drawing.Image)(resources.GetObject("ProductButton.Image")));
+            this.ProductButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ProductButton.Location = new System.Drawing.Point(213, 36);
+            this.ProductButton.Name = "ProductButton";
+            this.ProductButton.Size = new System.Drawing.Size(93, 78);
+            this.ProductButton.TabIndex = 1;
+            this.ProductButton.Text = "Productos";
+            this.ProductButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.ProductButton.UseVisualStyleBackColor = true;
+            this.ProductButton.Click += new System.EventHandler(this.ProductButton_Click);
             // 
             // BusinessButton
             // 
@@ -339,7 +340,7 @@
             this.Controls.Add(this.AboutButton2);
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.BusinessButton);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.ProductButton);
             this.Controls.Add(this.EmployeesButton);
             this.Controls.Add(this.ClientsButton);
             this.Controls.Add(this.PurchaseOrderButton);
@@ -370,7 +371,7 @@
         private System.Windows.Forms.Button HomeButton;
         private System.Windows.Forms.Button ClientsButton;
         private System.Windows.Forms.Button EmployeesButton;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button ProductButton;
         private System.Windows.Forms.Button BusinessButton;
         private System.Windows.Forms.Button SettingsButton;
         private System.Windows.Forms.Button AboutButton2;
