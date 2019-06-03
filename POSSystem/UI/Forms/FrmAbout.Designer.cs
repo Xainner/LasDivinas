@@ -106,9 +106,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(449, 112);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 20);
+            this.label4.Size = new System.Drawing.Size(182, 20);
             this.label4.TabIndex = 2;
-            this.label4.Text = "label";
+            this.label4.Text = "Nombre de el propietario";
             // 
             // linkLabel1
             // 
