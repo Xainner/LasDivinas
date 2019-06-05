@@ -51,7 +51,6 @@
             this.UpdateButton = new System.Windows.Forms.Button();
             this.CleanButton = new System.Windows.Forms.Button();
             this.BusinessDataGridView = new System.Windows.Forms.DataGridView();
-            this.SearchTextBox = new MetroFramework.Controls.MetroTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
@@ -86,7 +85,7 @@
             this.label2.Location = new System.Drawing.Point(22, 27);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(81, 20);
-            this.label2.TabIndex = 2;
+            this.label2.TabIndex = 0;
             this.label2.Text = "    Nombre";
             // 
             // label3
@@ -98,7 +97,7 @@
             this.label3.Location = new System.Drawing.Point(22, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 20);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 1;
             this.label3.Text = "    Nombre de Sociedad";
             // 
             // label4
@@ -150,7 +149,7 @@
             this.groupBox1.Location = new System.Drawing.Point(3, 65);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1284, 143);
-            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
             // LogoPictureBox
@@ -171,7 +170,7 @@
             this.label9.Location = new System.Drawing.Point(22, 97);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(133, 20);
-            this.label9.TabIndex = 6;
+            this.label9.TabIndex = 2;
             this.label9.Text = "    Cédula Jurídica";
             // 
             // EmailTextBox
@@ -201,7 +200,7 @@
             this.EmailTextBox.SelectionStart = 0;
             this.EmailTextBox.ShortcutsEnabled = true;
             this.EmailTextBox.Size = new System.Drawing.Size(167, 25);
-            this.EmailTextBox.TabIndex = 5;
+            this.EmailTextBox.TabIndex = 4;
             this.EmailTextBox.UseSelectable = true;
             this.EmailTextBox.WaterMark = "Ingrese el correo electrónico.";
             this.EmailTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -266,7 +265,7 @@
             this.TelephoneTextBox.SelectionStart = 0;
             this.TelephoneTextBox.ShortcutsEnabled = true;
             this.TelephoneTextBox.Size = new System.Drawing.Size(167, 25);
-            this.TelephoneTextBox.TabIndex = 5;
+            this.TelephoneTextBox.TabIndex = 3;
             this.TelephoneTextBox.UseSelectable = true;
             this.TelephoneTextBox.WaterMark = "Ingrese el número telefónico.";
             this.TelephoneTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -298,7 +297,7 @@
             this.LegalDocumentTextBox.SelectionStart = 0;
             this.LegalDocumentTextBox.ShortcutsEnabled = true;
             this.LegalDocumentTextBox.Size = new System.Drawing.Size(167, 25);
-            this.LegalDocumentTextBox.TabIndex = 5;
+            this.LegalDocumentTextBox.TabIndex = 2;
             this.LegalDocumentTextBox.UseSelectable = true;
             this.LegalDocumentTextBox.WaterMark = "Ingrese la cédula jurídica.";
             this.LegalDocumentTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -332,7 +331,7 @@
             this.AddressTextBox.SelectionStart = 0;
             this.AddressTextBox.ShortcutsEnabled = true;
             this.AddressTextBox.Size = new System.Drawing.Size(219, 72);
-            this.AddressTextBox.TabIndex = 5;
+            this.AddressTextBox.TabIndex = 6;
             this.AddressTextBox.UseSelectable = true;
             this.AddressTextBox.WaterMark = "Ingrese la dirección.";
             this.AddressTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -364,7 +363,7 @@
             this.SocietyNameTextBox.SelectionStart = 0;
             this.SocietyNameTextBox.ShortcutsEnabled = true;
             this.SocietyNameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.SocietyNameTextBox.TabIndex = 5;
+            this.SocietyNameTextBox.TabIndex = 1;
             this.SocietyNameTextBox.UseSelectable = true;
             this.SocietyNameTextBox.WaterMark = "Ingrese el nombre de sociedad.";
             this.SocietyNameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -396,7 +395,7 @@
             this.NameTextBox.SelectionStart = 0;
             this.NameTextBox.ShortcutsEnabled = true;
             this.NameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.NameTextBox.TabIndex = 5;
+            this.NameTextBox.TabIndex = 0;
             this.NameTextBox.UseSelectable = true;
             this.NameTextBox.WaterMark = "Ingrese el nombre del negocio.";
             this.NameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -449,7 +448,7 @@
             this.UpdateButton.Location = new System.Drawing.Point(1067, 606);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(107, 23);
-            this.UpdateButton.TabIndex = 8;
+            this.UpdateButton.TabIndex = 0;
             this.UpdateButton.Text = "Modificar";
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -462,7 +461,7 @@
             this.CleanButton.Location = new System.Drawing.Point(1180, 606);
             this.CleanButton.Name = "CleanButton";
             this.CleanButton.Size = new System.Drawing.Size(107, 23);
-            this.CleanButton.TabIndex = 8;
+            this.CleanButton.TabIndex = 1;
             this.CleanButton.Text = "Limpiar";
             this.CleanButton.UseVisualStyleBackColor = true;
             this.CleanButton.Click += new System.EventHandler(this.CleanButton_Click);
@@ -479,44 +478,9 @@
             this.BusinessDataGridView.Name = "BusinessDataGridView";
             this.BusinessDataGridView.ReadOnly = true;
             this.BusinessDataGridView.RowHeadersVisible = false;
+            this.BusinessDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.BusinessDataGridView.Size = new System.Drawing.Size(1284, 357);
             this.BusinessDataGridView.TabIndex = 4;
-            // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            // 
-            // 
-            // 
-            this.SearchTextBox.CustomButton.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.SearchTextBox.CustomButton.Location = new System.Drawing.Point(173, 1);
-            this.SearchTextBox.CustomButton.Name = "";
-            this.SearchTextBox.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.SearchTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.SearchTextBox.CustomButton.TabIndex = 1;
-            this.SearchTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.SearchTextBox.CustomButton.UseSelectable = true;
-            this.SearchTextBox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
-            this.SearchTextBox.Lines = new string[0];
-            this.SearchTextBox.Location = new System.Drawing.Point(1092, 214);
-            this.SearchTextBox.MaxLength = 32767;
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.PasswordChar = '\0';
-            this.SearchTextBox.PromptText = "Ingrese el nombre del cliente.";
-            this.SearchTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.SearchTextBox.SelectedText = "";
-            this.SearchTextBox.SelectionLength = 0;
-            this.SearchTextBox.SelectionStart = 0;
-            this.SearchTextBox.ShortcutsEnabled = true;
-            this.SearchTextBox.ShowButton = true;
-            this.SearchTextBox.ShowClearButton = true;
-            this.SearchTextBox.Size = new System.Drawing.Size(195, 23);
-            this.SearchTextBox.TabIndex = 5;
-            this.SearchTextBox.UseSelectable = true;
-            this.SearchTextBox.WaterMark = "Ingrese el nombre del cliente.";
-            this.SearchTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.SearchTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SearchTextBox.ButtonClick += new MetroFramework.Controls.MetroTextBox.ButClick(this.SearchButton_ButtonClick);
             // 
             // UcBusiness
             // 
@@ -528,7 +492,6 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.SearchTextBox);
             this.Name = "UcBusiness";
             this.Size = new System.Drawing.Size(1294, 639);
             this.Load += new System.EventHandler(this.UcBusiness_Load);
@@ -558,7 +521,6 @@
         private System.Windows.Forms.Button CleanButton;
         private System.Windows.Forms.Button UpdateButton;
         private System.Windows.Forms.DataGridView BusinessDataGridView;
-        private MetroFramework.Controls.MetroTextBox SearchTextBox;
         private System.Windows.Forms.Label label9;
         private MetroFramework.Controls.MetroTextBox TelephoneTextBox;
         private MetroFramework.Controls.MetroTextBox EmailTextBox;

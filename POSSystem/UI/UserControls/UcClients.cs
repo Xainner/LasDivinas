@@ -7,21 +7,72 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using POSSystemLibrary.Management;
+using POSSystemLibrary.Models;
+using MetroFramework;
 
 namespace UI.UserControls
 {
     public partial class UcClients : UserControl
     {
+        //---------GLOBALS---------
+        List<ClientModel> clientModels;
 
         public UcClients()
         {
             InitializeComponent();
         }
 
+        // Methods
+        private void Clear()
+        {
+            IdLabel.Text = "none";
+            NameTextBox.Text = string.Empty;
+            LastNameTextBox.Text = string.Empty;
+            BornDateTimePicker.Text = string.Empty;
+            IdentificationTextBox.Text = string.Empty;
+            SearchTextBox.Text = string.Empty;
+            EmailTextBox.Text = string.Empty;
+        }
+
         private void UcClients_Load(object sender, EventArgs e)
         {
-            ClientDataGridView.DataSource = ClientManagement.SelectAllClients();
-            
+            ReloadClient();
+
+        }
+
+        //--------------------Metodos de actualizaciones-------------------------
+
+        private void ReloadClient()
+        {
+            clientModels = ClientManagement.SelectAllClients();
+            ClientDataGridView.MultiSelect = false;
+            ClientDataGridView.DataSource = clientModels;
+
+            ClientDataGridView.Columns["Id_Client"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ClientDataGridView.Columns["Name"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ClientDataGridView.Columns["LastName"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            ClientDataGridView.Columns["Identification_Type"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ClientDataGridView.Columns["Identification"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ClientDataGridView.Columns["Email"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ClientDataGridView.Columns["Born_Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ClientDataGridView.Columns["Registration_Date"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+
+            ClientDataGridView.Columns["Id_Client"].HeaderText = "Id";
+            ClientDataGridView.Columns["Name"].HeaderText = "Nombre";
+            ClientDataGridView.Columns["LastName"].HeaderText = "Apellidos";            
+            ClientDataGridView.Columns["Identification_Type"].HeaderText = "Tipo de Identificación";
+            ClientDataGridView.Columns["Identification"].HeaderText = "Identificación";
+            ClientDataGridView.Columns["Email"].HeaderText = "Correo electronico";
+            ClientDataGridView.Columns["Born_Date"].HeaderText = "Fecha de Nacimiento";
+            ClientDataGridView.Columns["Registration_Date"].HeaderText = "Fecha de Registro";
+
+            ClientDataGridView.Columns["Id_Client"].Visible = false;
+            ClientDataGridView.Columns["Born_Date"].DefaultCellStyle.Format = "d";
+            ClientDataGridView.Columns["Registration_Date"].DefaultCellStyle.Format = "d";
+
+            ClientDataGridView.Columns["Born_Date"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            ClientDataGridView.Columns["Registration_Date"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            ClientDataGridView.Columns["Identification"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
@@ -45,19 +96,14 @@ namespace UI.UserControls
             {
                 if (!string.IsNullOrEmpty(NameTextBox.Text) && !string.IsNullOrEmpty(LastNameTextBox.Text))
                 {
-                    string name = NameTextBox.Text;
-                    string lastName = LastNameTextBox.Text;
-                    string phoneNumber = PhoneNumberTextBox.Text;
-                    string idType = IdTypeComboBox.SelectedItem.ToString();
-                    string identification = IdentificationTextBox.Text;
-                    DateTime bornDate = BornDateTimePicker.Value;
-                    string email = EmailTextBox.Text;
                     DateTime fecha = DateTime.Now;
 
-                    if (ClientManagement.InsertClient(name, lastName, idType, identification, email, bornDate, fecha))
+                    if (ClientManagement.InsertClient(NameTextBox.Text, LastNameTextBox.Text, IdTypeComboBox.SelectedItem.ToString(),
+                        IdentificationTextBox.Text, EmailTextBox.Text, BornDateTimePicker.Value, fecha))
                     {
                         FrmMain.Instance.ToolStripLabel.Text = "Se agrego el Cliente correctamente.";
                         Clear();
+                        ReloadClient();
                     }
                     else
                     {
@@ -76,25 +122,23 @@ namespace UI.UserControls
         {
             if (!IdLabel.Text.Equals("none"))
             {
-                if (!string.IsNullOrEmpty(NameTextBox.Text) && !string.IsNullOrEmpty(LastNameTextBox.Text))
+                if (!string.IsNullOrEmpty(NameTextBox.Text) && !string.IsNullOrEmpty(LastNameTextBox.Text) 
+                    && ClientDataGridView.CurrentRow.Cells[0].Value.ToString() != null)
                 {
-                    int Id = int.Parse(IdLabel.Text);
-                    string name = NameTextBox.Text;
-                    string lastName = LastNameTextBox.Text;
-                    string phoneNumber = PhoneNumberTextBox.Text;
-                    //string idType = IdTypeComboBox.SelectedValue.ToString();
-                    string identification = IdentificationTextBox.Text;
-                    DateTime bornDate = BornDateTimePicker.Value;
-                    string email = EmailTextBox.Text;
 
-                    if (ClientManagement.UpdateClientById(Id, name, lastName, IdTypeComboBox.SelectedValue.ToString(), identification, email, bornDate))
+                    if (MetroMessageBox.Show(this, $"¿Seguro que desea modificar al cliente: { ClientDataGridView.CurrentRow.Cells[1].Value.ToString() }?", "Modificar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
-                        FrmMain.Instance.ToolStripLabel.Text = "Se modifico el Cliente correctamente.";
-                        Clear();
-                    }
-                    else
-                    {
-                        FrmMain.Instance.ToolStripLabel.Text = "Error! No se pudo modificar el Cliente.";
+                        if (ClientManagement.UpdateClientById(int.Parse(IdLabel.Text), NameTextBox.Text, LastNameTextBox.Text, IdTypeComboBox.SelectedItem.ToString(),
+                            IdentificationTextBox.Text, EmailTextBox.Text, BornDateTimePicker.Value))
+                        {
+                            FrmMain.Instance.ToolStripLabel.Text = "Se modifico el cliente correctamente.";
+                            Clear();
+                            ReloadClient();
+                        }
+                        else
+                        {
+                            MetroMessageBox.Show(this, $"Ha ocurrido un error al modificar al cliente: { NameTextBox.Text}.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
                 else
@@ -116,6 +160,7 @@ namespace UI.UserControls
                     {
                         FrmMain.Instance.ToolStripLabel.Text = "Se elimino el Cliente correctamente.";
                         Clear();
+                        ReloadClient();
                     }
                     else
                     {
@@ -132,18 +177,39 @@ namespace UI.UserControls
         private void NewButton_Click_1(object sender, EventArgs e)
         {
             Clear();
+            clientModels = ClientManagement.SelectAllClients();
+            ClientDataGridView.DataSource = clientModels;
         }
 
-        // Methods
-        private void Clear()
+        // ------------------ METODOS DATAGRID ---------------------
+
+        private void ClientDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            NameTextBox.Text = string.Empty;
-            LastNameTextBox.Text = string.Empty;
-            PhoneNumberTextBox.Text = string.Empty;
-            IdentificationTextBox.Text = string.Empty;
-            PhoneNumberTextBox.Text = string.Empty;
-            SearchTextBox.Text = string.Empty;
-            EmailTextBox.Text = string.Empty;
+            try
+            {
+                if (ClientDataGridView.SelectedRows[0] != null)
+                {
+                    IdLabel.Text = ClientDataGridView.CurrentRow.Cells[0].Value.ToString();
+                    NameTextBox.Text = ClientDataGridView.CurrentRow.Cells[1].Value.ToString();
+                    LastNameTextBox.Text = ClientDataGridView.CurrentRow.Cells[2].Value.ToString();
+                    IdentificationTextBox.Text = ClientDataGridView.CurrentRow.Cells[4].Value.ToString();
+                    EmailTextBox.Text = ClientDataGridView.CurrentRow.Cells[5].Value.ToString();
+                    BornDateTimePicker.Text = ClientDataGridView.CurrentRow.Cells[6].Value.ToString();
+
+                    foreach (string idTypes in IdTypeComboBox.Items)
+                    {
+                        if (idTypes.Equals(ClientDataGridView.CurrentRow.Cells[3].Value.ToString()))
+                        {
+                            IdTypeComboBox.SelectedItem = idTypes;
+                            break;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MetroMessageBox.Show(this, $"Ha ocurrido un error al seleccionar el empleado.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

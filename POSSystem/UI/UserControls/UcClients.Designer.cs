@@ -35,11 +35,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.IdLabel = new System.Windows.Forms.Label();
             this.EmailTextBox = new MetroFramework.Controls.MetroTextBox();
-            this.PhoneNumberTextBox = new MetroFramework.Controls.MetroTextBox();
             this.IdentificationTextBox = new MetroFramework.Controls.MetroTextBox();
             this.LastNameTextBox = new MetroFramework.Controls.MetroTextBox();
             this.NameTextBox = new MetroFramework.Controls.MetroTextBox();
@@ -108,7 +106,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Image = ((System.Drawing.Image)(resources.GetObject("label4.Image")));
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(898, 27);
+            this.label4.Location = new System.Drawing.Point(479, 97);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(154, 20);
             this.label4.TabIndex = 2;
@@ -127,32 +125,17 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "    Identificación";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Image = ((System.Drawing.Image)(resources.GetObject("label6.Image")));
-            this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(22, 97);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(158, 20);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "    Número Telefónico";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.IdLabel);
             this.groupBox1.Controls.Add(this.EmailTextBox);
-            this.groupBox1.Controls.Add(this.PhoneNumberTextBox);
             this.groupBox1.Controls.Add(this.IdentificationTextBox);
             this.groupBox1.Controls.Add(this.LastNameTextBox);
             this.groupBox1.Controls.Add(this.NameTextBox);
             this.groupBox1.Controls.Add(this.IdTypeComboBox);
             this.groupBox1.Controls.Add(this.BornDateTimePicker);
-            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.label8);
@@ -191,7 +174,7 @@
             this.EmailTextBox.CustomButton.UseSelectable = true;
             this.EmailTextBox.CustomButton.Visible = false;
             this.EmailTextBox.Lines = new string[0];
-            this.EmailTextBox.Location = new System.Drawing.Point(1084, 27);
+            this.EmailTextBox.Location = new System.Drawing.Point(669, 97);
             this.EmailTextBox.MaxLength = 32767;
             this.EmailTextBox.Name = "EmailTextBox";
             this.EmailTextBox.PasswordChar = '\0';
@@ -207,38 +190,6 @@
             this.EmailTextBox.WaterMark = "Ingrese el correo electrónico.";
             this.EmailTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.EmailTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // PhoneNumberTextBox
-            // 
-            // 
-            // 
-            // 
-            this.PhoneNumberTextBox.CustomButton.Image = null;
-            this.PhoneNumberTextBox.CustomButton.Location = new System.Drawing.Point(143, 1);
-            this.PhoneNumberTextBox.CustomButton.Name = "";
-            this.PhoneNumberTextBox.CustomButton.Size = new System.Drawing.Size(23, 23);
-            this.PhoneNumberTextBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.PhoneNumberTextBox.CustomButton.TabIndex = 1;
-            this.PhoneNumberTextBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.PhoneNumberTextBox.CustomButton.UseSelectable = true;
-            this.PhoneNumberTextBox.CustomButton.Visible = false;
-            this.PhoneNumberTextBox.Lines = new string[0];
-            this.PhoneNumberTextBox.Location = new System.Drawing.Point(212, 97);
-            this.PhoneNumberTextBox.MaxLength = 32767;
-            this.PhoneNumberTextBox.Name = "PhoneNumberTextBox";
-            this.PhoneNumberTextBox.PasswordChar = '\0';
-            this.PhoneNumberTextBox.PromptText = "Ingrese el número telefónico.";
-            this.PhoneNumberTextBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.PhoneNumberTextBox.SelectedText = "";
-            this.PhoneNumberTextBox.SelectionLength = 0;
-            this.PhoneNumberTextBox.SelectionStart = 0;
-            this.PhoneNumberTextBox.ShortcutsEnabled = true;
-            this.PhoneNumberTextBox.Size = new System.Drawing.Size(167, 25);
-            this.PhoneNumberTextBox.TabIndex = 5;
-            this.PhoneNumberTextBox.UseSelectable = true;
-            this.PhoneNumberTextBox.WaterMark = "Ingrese el número telefónico.";
-            this.PhoneNumberTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.PhoneNumberTextBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // IdentificationTextBox
             // 
@@ -267,7 +218,7 @@
             this.IdentificationTextBox.SelectionStart = 0;
             this.IdentificationTextBox.ShortcutsEnabled = true;
             this.IdentificationTextBox.Size = new System.Drawing.Size(167, 25);
-            this.IdentificationTextBox.TabIndex = 5;
+            this.IdentificationTextBox.TabIndex = 4;
             this.IdentificationTextBox.UseSelectable = true;
             this.IdentificationTextBox.WaterMark = "Ingrese la identificación.";
             this.IdentificationTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -299,7 +250,7 @@
             this.LastNameTextBox.SelectionStart = 0;
             this.LastNameTextBox.ShortcutsEnabled = true;
             this.LastNameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.LastNameTextBox.TabIndex = 5;
+            this.LastNameTextBox.TabIndex = 1;
             this.LastNameTextBox.UseSelectable = true;
             this.LastNameTextBox.WaterMark = "Ingrese el apellido del cliente.";
             this.LastNameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -331,7 +282,7 @@
             this.NameTextBox.SelectionStart = 0;
             this.NameTextBox.ShortcutsEnabled = true;
             this.NameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.NameTextBox.TabIndex = 5;
+            this.NameTextBox.TabIndex = 0;
             this.NameTextBox.UseSelectable = true;
             this.NameTextBox.WaterMark = "Ingrese el nombre del cliente.";
             this.NameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -350,17 +301,17 @@
             this.IdTypeComboBox.Location = new System.Drawing.Point(669, 27);
             this.IdTypeComboBox.Name = "IdTypeComboBox";
             this.IdTypeComboBox.Size = new System.Drawing.Size(167, 28);
-            this.IdTypeComboBox.TabIndex = 4;
+            this.IdTypeComboBox.TabIndex = 3;
             // 
             // BornDateTimePicker
             // 
             this.BornDateTimePicker.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.BornDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BornDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.BornDateTimePicker.Location = new System.Drawing.Point(669, 97);
+            this.BornDateTimePicker.Location = new System.Drawing.Point(212, 102);
             this.BornDateTimePicker.Name = "BornDateTimePicker";
             this.BornDateTimePicker.Size = new System.Drawing.Size(167, 26);
-            this.BornDateTimePicker.TabIndex = 3;
+            this.BornDateTimePicker.TabIndex = 2;
             // 
             // label7
             // 
@@ -382,7 +333,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Image = ((System.Drawing.Image)(resources.GetObject("label8.Image")));
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(479, 97);
+            this.label8.Location = new System.Drawing.Point(22, 102);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(175, 20);
             this.label8.TabIndex = 2;
@@ -400,8 +351,10 @@
             this.ClientDataGridView.Name = "ClientDataGridView";
             this.ClientDataGridView.ReadOnly = true;
             this.ClientDataGridView.RowHeadersVisible = false;
+            this.ClientDataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ClientDataGridView.Size = new System.Drawing.Size(1284, 357);
             this.ClientDataGridView.TabIndex = 4;
+            this.ClientDataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientDataGridView_CellClick);
             // 
             // SearchTextBox
             // 
@@ -432,7 +385,7 @@
             this.SearchTextBox.ShowButton = true;
             this.SearchTextBox.ShowClearButton = true;
             this.SearchTextBox.Size = new System.Drawing.Size(195, 23);
-            this.SearchTextBox.TabIndex = 5;
+            this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.UseSelectable = true;
             this.SearchTextBox.WaterMark = "Ingrese el nombre del cliente.";
             this.SearchTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -447,7 +400,7 @@
             this.ModifyButton.Location = new System.Drawing.Point(1067, 606);
             this.ModifyButton.Name = "ModifyButton";
             this.ModifyButton.Size = new System.Drawing.Size(107, 23);
-            this.ModifyButton.TabIndex = 9;
+            this.ModifyButton.TabIndex = 3;
             this.ModifyButton.Text = "Modificar";
             this.ModifyButton.UseVisualStyleBackColor = true;
             this.ModifyButton.Click += new System.EventHandler(this.ModifyButton_Click_1);
@@ -460,7 +413,7 @@
             this.DeleteButton.Location = new System.Drawing.Point(1180, 606);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(107, 23);
-            this.DeleteButton.TabIndex = 10;
+            this.DeleteButton.TabIndex = 4;
             this.DeleteButton.Text = "Eliminar";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click_1);
@@ -473,7 +426,7 @@
             this.NewButton.Location = new System.Drawing.Point(841, 606);
             this.NewButton.Name = "NewButton";
             this.NewButton.Size = new System.Drawing.Size(107, 23);
-            this.NewButton.TabIndex = 11;
+            this.NewButton.TabIndex = 1;
             this.NewButton.Text = "Nuevo";
             this.NewButton.UseVisualStyleBackColor = true;
             this.NewButton.Click += new System.EventHandler(this.NewButton_Click_1);
@@ -486,7 +439,7 @@
             this.AddButton.Location = new System.Drawing.Point(954, 606);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(107, 23);
-            this.AddButton.TabIndex = 12;
+            this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Guardar";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click_1);
@@ -524,11 +477,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DateTimePicker BornDateTimePicker;
         private MetroFramework.Controls.MetroTextBox EmailTextBox;
-        private MetroFramework.Controls.MetroTextBox PhoneNumberTextBox;
         private MetroFramework.Controls.MetroTextBox IdentificationTextBox;
         private MetroFramework.Controls.MetroTextBox LastNameTextBox;
         private MetroFramework.Controls.MetroTextBox NameTextBox;

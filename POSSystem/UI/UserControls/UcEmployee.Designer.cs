@@ -132,7 +132,7 @@
             this.PhoneNumberTextBox.SelectionStart = 0;
             this.PhoneNumberTextBox.ShortcutsEnabled = true;
             this.PhoneNumberTextBox.Size = new System.Drawing.Size(167, 25);
-            this.PhoneNumberTextBox.TabIndex = 5;
+            this.PhoneNumberTextBox.TabIndex = 2;
             this.PhoneNumberTextBox.UseSelectable = true;
             this.PhoneNumberTextBox.WaterMark = "Ingrese el número telefónico.";
             this.PhoneNumberTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -165,7 +165,7 @@
             this.IdentificationTextBox.SelectionStart = 0;
             this.IdentificationTextBox.ShortcutsEnabled = true;
             this.IdentificationTextBox.Size = new System.Drawing.Size(167, 25);
-            this.IdentificationTextBox.TabIndex = 5;
+            this.IdentificationTextBox.TabIndex = 4;
             this.IdentificationTextBox.UseSelectable = true;
             this.IdentificationTextBox.WaterMark = "Ingrese la identificación.";
             this.IdentificationTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -197,7 +197,7 @@
             this.LastNameTextBox.SelectionStart = 0;
             this.LastNameTextBox.ShortcutsEnabled = true;
             this.LastNameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.LastNameTextBox.TabIndex = 5;
+            this.LastNameTextBox.TabIndex = 1;
             this.LastNameTextBox.UseSelectable = true;
             this.LastNameTextBox.WaterMark = "Ingrese el apellido del cliente.";
             this.LastNameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -229,7 +229,7 @@
             this.NameTextBox.SelectionStart = 0;
             this.NameTextBox.ShortcutsEnabled = true;
             this.NameTextBox.Size = new System.Drawing.Size(167, 25);
-            this.NameTextBox.TabIndex = 5;
+            this.NameTextBox.TabIndex = 0;
             this.NameTextBox.UseSelectable = true;
             this.NameTextBox.WaterMark = "Ingrese el nombre del cliente.";
             this.NameTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -248,7 +248,7 @@
             this.IdTypeComboBox.Location = new System.Drawing.Point(669, 27);
             this.IdTypeComboBox.Name = "IdTypeComboBox";
             this.IdTypeComboBox.Size = new System.Drawing.Size(167, 28);
-            this.IdTypeComboBox.TabIndex = 4;
+            this.IdTypeComboBox.TabIndex = 3;
             // 
             // BornDateTimePicker
             // 
@@ -258,7 +258,7 @@
             this.BornDateTimePicker.Location = new System.Drawing.Point(669, 97);
             this.BornDateTimePicker.Name = "BornDateTimePicker";
             this.BornDateTimePicker.Size = new System.Drawing.Size(167, 26);
-            this.BornDateTimePicker.TabIndex = 3;
+            this.BornDateTimePicker.TabIndex = 5;
             // 
             // label6
             // 
@@ -384,7 +384,7 @@
             this.SearchTextBox.ShowButton = true;
             this.SearchTextBox.ShowClearButton = true;
             this.SearchTextBox.Size = new System.Drawing.Size(195, 23);
-            this.SearchTextBox.TabIndex = 13;
+            this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.UseSelectable = true;
             this.SearchTextBox.WaterMark = "Ingrese nombre del empleado.";
             this.SearchTextBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -399,7 +399,7 @@
             this.UpdateButton.Location = new System.Drawing.Point(1067, 606);
             this.UpdateButton.Name = "UpdateButton";
             this.UpdateButton.Size = new System.Drawing.Size(107, 23);
-            this.UpdateButton.TabIndex = 14;
+            this.UpdateButton.TabIndex = 3;
             this.UpdateButton.Text = "Modificar";
             this.UpdateButton.UseVisualStyleBackColor = true;
             this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
@@ -412,7 +412,7 @@
             this.DeleteButton.Location = new System.Drawing.Point(1180, 606);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(107, 23);
-            this.DeleteButton.TabIndex = 15;
+            this.DeleteButton.TabIndex = 4;
             this.DeleteButton.Text = "Eliminar";
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
@@ -425,7 +425,7 @@
             this.CleanButton.Location = new System.Drawing.Point(841, 606);
             this.CleanButton.Name = "CleanButton";
             this.CleanButton.Size = new System.Drawing.Size(107, 23);
-            this.CleanButton.TabIndex = 16;
+            this.CleanButton.TabIndex = 1;
             this.CleanButton.Text = "Nuevo";
             this.CleanButton.UseVisualStyleBackColor = true;
             this.CleanButton.Click += new System.EventHandler(this.CleanButton_Click);
@@ -438,7 +438,7 @@
             this.SaveButton.Location = new System.Drawing.Point(954, 606);
             this.SaveButton.Name = "SaveButton";
             this.SaveButton.Size = new System.Drawing.Size(107, 23);
-            this.SaveButton.TabIndex = 17;
+            this.SaveButton.TabIndex = 2;
             this.SaveButton.Text = "Guardar";
             this.SaveButton.UseVisualStyleBackColor = true;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);

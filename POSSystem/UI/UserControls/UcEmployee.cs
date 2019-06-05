@@ -22,6 +22,18 @@ namespace UI.UserControls
             InitializeComponent();
         }
 
+        private void Clear()
+        {
+            IdLabel.Text = "none";
+            NameTextBox.Text = string.Empty;
+            LastNameTextBox.Text = string.Empty;
+            PhoneNumberTextBox.Text = string.Empty;
+            IdentificationTextBox.Text = string.Empty;
+            PhoneNumberTextBox.Text = string.Empty;
+            BornDateTimePicker.Text = string.Empty;
+            SearchTextBox.Text = string.Empty;
+        }
+
         private void UcEmployee_Load(object sender, EventArgs e)
         {
             ReloadEmployees();
@@ -62,6 +74,8 @@ namespace UI.UserControls
             EmployeeDataGridView.Columns["Identification"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
+        //---------Metodo de busqueda-----------------------
+
         private void SearchTextBox_ButtonClick(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(SearchTextBox.Text))
@@ -82,12 +96,16 @@ namespace UI.UserControls
             try
             {
                 Clear();
+                employeeModels = EmployeeManagement.SelectAllEmployees();
+                EmployeeDataGridView.DataSource = employeeModels;
             }
             catch (Exception)
             {
                 MetroMessageBox.Show(this, $"Ha ocurrido un error al limpiar la ventana.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        //-----------------Metodo de ACME-------------------------------
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -125,7 +143,8 @@ namespace UI.UserControls
         {
             if (!IdLabel.Text.Equals("none"))
             {
-                if (!string.IsNullOrEmpty(NameTextBox.Text) && !string.IsNullOrEmpty(LastNameTextBox.Text) && EmployeeDataGridView.CurrentRow.Cells[0].Value.ToString() != null)
+                if (!string.IsNullOrEmpty(NameTextBox.Text) && !string.IsNullOrEmpty(LastNameTextBox.Text) 
+                    && EmployeeDataGridView.CurrentRow.Cells[0].Value.ToString() != null)
                 {
                     if (MetroMessageBox.Show(this, $"¿Seguro que desea modificar al empleado: { EmployeeDataGridView.CurrentRow.Cells[1].Value.ToString() }?", "Modificar empleado", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     {
@@ -171,18 +190,7 @@ namespace UI.UserControls
             }
         }
 
-        // ------------------ METODOS ---------------------
-
-        private void Clear()
-        {
-            NameTextBox.Text = string.Empty;
-            LastNameTextBox.Text = string.Empty;
-            PhoneNumberTextBox.Text = string.Empty;
-            IdentificationTextBox.Text = string.Empty;
-            PhoneNumberTextBox.Text = string.Empty;
-            BornDateTimePicker.Text = string.Empty;
-            SearchTextBox.Text = string.Empty;
-        }
+        // ------------------ METODOS DATAGRID ---------------------
 
         private void EmployeeDataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
