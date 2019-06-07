@@ -54,19 +54,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Management\BrandManagement.cs" />
     <Compile Include="Management\BusinessManagement.cs" />
+    <Compile Include="Management\CategoryManagement.cs" />
     <Compile Include="Management\ClientManagement.cs" />
     <Compile Include="Management\EmployeeManagement.cs" />
     <Compile Include="Management\ProductManagement.cs" />
+    <Compile Include="Management\SubcategoryManagement.cs" />
+    <Compile Include="Models\BrandModel.cs" />
     <Compile Include="Models\BusinessModel.cs" />
+    <Compile Include="Models\CategoryModel.cs" />
     <Compile Include="Models\ClientModel.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
     <Compile Include="Models\ProductModel.cs" />
+    <Compile Include="Models\ShowProductModel.cs" />
+    <Compile Include="Models\SubcategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SQLiteDataBase\BrandConnection.cs" />
     <Compile Include="SQLiteDataBase\BusinessConnection.cs" />
+    <Compile Include="SQLiteDataBase\CategoryConnection.cs" />
     <Compile Include="SQLiteDataBase\ClientConnection.cs" />
     <Compile Include="SQLiteDataBase\EmployeeConnection.cs" />
     <Compile Include="SQLiteDataBase\ProductConnection.cs" />
+    <Compile Include="SQLiteDataBase\SubcategoryConnection.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

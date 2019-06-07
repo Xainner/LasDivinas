@@ -126,6 +126,7 @@
     <Compile Include="UserControls\UcSettings.Designer.cs">
       <DependentUpon>UcSettings.cs</DependentUpon>
     </Compile>
+    <Compile Include="Utilities\ImageManagement.cs" />
     <Compile Include="Utilities\RoundButtons.cs">
       <SubType>Component</SubType>
     </Compile>

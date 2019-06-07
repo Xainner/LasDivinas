@@ -21,3 +21,4 @@ C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSys
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.csproj.CopyComplete
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.dll
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.pdb
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\POSSystemLibrary\obj\Debug\POSSystemLibrary.csprojAssemblyReference.cache

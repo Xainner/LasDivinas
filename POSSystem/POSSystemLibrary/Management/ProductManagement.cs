@@ -8,18 +8,19 @@ using System.Threading.Tasks;
 
 namespace POSSystemLibrary.Management
 {
-    public class ProductManagement
+    public static class ProductManagement
     {
 
-    //-----------------METODOS ACME DEL PRODUCTO ---------------------------
+        //-----------------METODOS ACME DEL PRODUCTO ---------------------------
 
-    // AGREGAR PRODUCTO
-    
+        // AGREGAR PRODUCTO
+
         public static bool InsertProduct(
             string code,
             string idBrand,
-            string idSubCategory,
+            string idSubcategory,
             string Description,
+            string Stock,
             string Price,
             string lowerPrice,
             byte[] image,
@@ -31,8 +32,9 @@ namespace POSSystemLibrary.Management
                 string[] Product = new string[] {
                     code,
                     idBrand,
-                    idSubCategory,
+                    idSubcategory,
                     Description,
+                    Stock,
                     Price,
                     lowerPrice
                 };
@@ -40,8 +42,9 @@ namespace POSSystemLibrary.Management
                 {
                     Code = code,
                     Id_Brand = int.Parse(idBrand),
-                    Id_Subcategory = int.Parse(idSubCategory),
+                    Id_Subcategory = int.Parse(idSubcategory),
                     Description = Description,
+                    Quantity_Stock = int.Parse(Stock),
                     Price = decimal.Parse(Price),
                     Lower_Price = decimal.Parse(lowerPrice),
                     Ivi = ivi,
@@ -60,9 +63,11 @@ namespace POSSystemLibrary.Management
         // ACTUALIZAR PRODUCTO
 
         public static bool UpdateProductById(
+            string idProduct,
             string code,
             string idBrand,
             string idSubCategory,
+            string stock,
             string Description,
             string Price,
             string lowerPrice,
@@ -73,18 +78,22 @@ namespace POSSystemLibrary.Management
             try
             {
                 string[] product = new string[] {
+                    idProduct,
                     code,
                     idBrand,
                     idSubCategory,
+                    stock,
                     Description,
                     Price,
                     lowerPrice
                 };
                 ProductModel productModel = new ProductModel()
                 {
+                    Id_Product = int.Parse(idProduct),
                     Code = code,
                     Id_Brand = int.Parse(idBrand),
                     Id_Subcategory = int.Parse(idSubCategory),
+                    Quantity_Stock = int.Parse(stock),
                     Description = Description,
                     Price = decimal.Parse(Price),
                     Lower_Price = decimal.Parse(lowerPrice),
@@ -157,7 +166,7 @@ namespace POSSystemLibrary.Management
 
         //---------------METODOS DE BUSQUEDA DE PRODUCTOS
 
-        public static List<ProductModel> SelectAllProducts()
+        public static List<ShowProductModel> SelectAllProducts()
         {
             try
             {
@@ -183,6 +192,23 @@ namespace POSSystemLibrary.Management
             catch (Exception ex)
             {
                 return null;
+            }
+        }
+
+        public static ProductModel SelectProductByID(string id)
+        {
+            try
+            {
+                ProductModel productModel = new ProductModel()
+                {
+                    Id_Product = int.Parse(id)
+                };
+                return ProductConnection.SelectProductByID(productModel);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
             }
         }
     }
