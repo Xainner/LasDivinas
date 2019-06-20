@@ -90,6 +90,12 @@
     <Compile Include="UserControls\UcBusiness.Designer.cs">
       <DependentUpon>UcBusiness.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UcAttributes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcAttributes.Designer.cs">
+      <DependentUpon>UcAttributes.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UcClients.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcBusiness.resx">
       <DependentUpon>UcBusiness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcAttributes.resx">
+      <DependentUpon>UcAttributes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcClients.resx">
       <DependentUpon>UcClients.cs</DependentUpon>

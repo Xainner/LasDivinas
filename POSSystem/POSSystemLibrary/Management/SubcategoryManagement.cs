@@ -56,15 +56,15 @@ namespace POSSystemLibrary.Management
             }
         }
 
-        public static SubcategoryModel SelectSubCategoryByName(string name)
+        public static List<ShowCatAndSubcatModel> SearchSubcategory(string name)
         {
             try
             {
-                SubcategoryModel subCategoryModel = new SubcategoryModel()
+                ShowCatAndSubcatModel showCatAndSubcatModel = new ShowCatAndSubcatModel()
                 {
-                    Name = name
+                    Subcategory = name
                 };
-                return SubcategoryConnection.SelectSubCategoryByName(subCategoryModel);
+                return SubcategoryConnection.SearchSubcategory(showCatAndSubcatModel);
             }
             catch (Exception ex)
             {
@@ -85,6 +85,19 @@ namespace POSSystemLibrary.Management
             catch (Exception ex)
             {
                 throw;
+            }
+        }
+
+        public static List<ShowCatAndSubcatModel> SelectAllCatAndSucat()
+        {
+            try
+            {
+                return SubcategoryConnection.SelectAllCatAndSucat();
+            }
+            catch (Exception ex)
+            {
+                //Log4Net
+                return null;
             }
         }
 

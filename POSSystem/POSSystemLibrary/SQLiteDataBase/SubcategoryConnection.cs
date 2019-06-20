@@ -104,6 +104,40 @@ namespace POSSystemLibrary.SQLiteDataBase
             }
         }
 
+        public static List<ShowCatAndSubcatModel> SelectAllCatAndSucat()
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    var output = cnn.Query<ShowCatAndSubcatModel>("SELECT Id_Subcategory, C.Name as Category, S.Name as Subcategory " +
+                        "FROM Tbl_Subcategory S INNER JOIN Tbl_Category C ON S.Id_Category = C.Id_Category ");
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public static List<ShowCatAndSubcatModel> SearchSubcategory(ShowCatAndSubcatModel showCatAndSubcatModel)
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    var output = cnn.Query<ShowCatAndSubcatModel>("SELECT Id_Subcategory, C.Name as Category, S.Name as Subcategory " +
+                        "FROM Tbl_Subcategory S INNER JOIN Tbl_Category C ON S.Id_Category = C.Id_Category WHERE S.Name like @Subcategory", showCatAndSubcatModel);
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
         //-----------METODOS DE ACME DE LA SUBCATEGORIA---------------------
 
         public static bool InsertSubCategory(SubcategoryModel subCategoryModel)

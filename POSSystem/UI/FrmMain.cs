@@ -224,5 +224,18 @@ namespace UI
             MainPanel.Controls["ucProduct"].BringToFront();
             toolStripStatusLabel1.Text = "Sistema de facturación – Pantalla De Productos.";
         }
+
+        private void AttributesButton_Click(object sender, EventArgs e)
+        {
+            if (!MainPanel.Controls.ContainsKey("ucProduct"))
+            {
+                UcAttributes ucAttributes = new UcAttributes();
+                ucAttributes.Size = MainPanel.Size;
+                ucAttributes.Anchor = (AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Bottom);
+                MainPanel.Controls.Add(ucAttributes);
+            }
+            MainPanel.Controls["ucAttributes"].BringToFront();
+            toolStripStatusLabel1.Text = "Sistema de facturación – Pantalla De Atributos de el Producto.";
+        }
     }
 }

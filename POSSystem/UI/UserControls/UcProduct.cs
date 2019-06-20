@@ -55,17 +55,18 @@ namespace UI.UserControls
             ProductDataGridView.Columns["Id_Product"].HeaderText = "Id";
             ProductDataGridView.Columns["Code"].HeaderText = "Código";
             ProductDataGridView.Columns["Brand"].HeaderText = "Marca";
+            ProductDataGridView.Columns["Category"].HeaderText = "Categoría";
             ProductDataGridView.Columns["SubCategory"].HeaderText = "Sub-Categoría";
             ProductDataGridView.Columns["Description"].HeaderText = "Descripción";
             ProductDataGridView.Columns["Quantity_Stock"].HeaderText = "Stock";
             ProductDataGridView.Columns["Price"].HeaderText = "Precio Detalle";
             ProductDataGridView.Columns["Lower_Price"].HeaderText = "Precio Mayor";
-            ProductDataGridView.Columns["Image"].HeaderText = "Imagen";
             ProductDataGridView.Columns["Ivi"].HeaderText = "Ivi";
 
             ProductDataGridView.Columns["Id_Product"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             ProductDataGridView.Columns["Code"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             ProductDataGridView.Columns["Brand"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+            ProductDataGridView.Columns["Category"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             ProductDataGridView.Columns["SubCategory"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             ProductDataGridView.Columns["Description"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
             ProductDataGridView.Columns["Quantity_Stock"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
@@ -74,6 +75,9 @@ namespace UI.UserControls
             ProductDataGridView.Columns["Ivi"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
 
             ProductDataGridView.Columns["Id_Product"].Visible = false;
+            ProductDataGridView.Columns["Quantity_Stock"].Visible = false;
+            ProductDataGridView.Columns["Price"].Visible = false;
+            ProductDataGridView.Columns["Lower_Price"].Visible = false;
             ProductDataGridView.Columns["Image"].Visible = false;
             ProductDataGridView.Columns["Ivi"].Visible = false;
 
@@ -389,6 +393,13 @@ namespace UI.UserControls
             {
                 MetroMessageBox.Show(this, $"Ha ocurrido un error al seleccionar el producto.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        //----------------METODOS PARA BUSCAR PRODUCTOS---------------
+
+        private void SearchTextBox_ButtonClick(object sender, EventArgs e)
+        {
+
         }
     }
 }

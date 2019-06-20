@@ -83,3 +83,4 @@ C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.csproj.CoreCompil
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.exe
 C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.pdb
+C:\Users\XPC\Source\Repos\LasDivinas\POSSystem\UI\obj\Debug\UI.UserControls.UcAttributes.resources

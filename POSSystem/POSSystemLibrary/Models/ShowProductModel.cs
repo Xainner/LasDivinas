@@ -11,6 +11,7 @@ namespace POSSystemLibrary.Models
         public int Id_Product { get; set; }
         public string Code { get; set; }
         public string Brand { get; set; }
+        public string Category { get; set; }
         public string Subcategory { get; set; }
         public string Description { get; set; }
         public int Quantity_Stock { get; set; }

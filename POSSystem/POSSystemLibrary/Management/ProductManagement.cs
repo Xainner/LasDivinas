@@ -164,7 +164,7 @@ namespace POSSystemLibrary.Management
             }
         }
 
-        //---------------METODOS DE BUSQUEDA DE PRODUCTOS
+        //---------------METODOS DE BUSQUEDA DE PRODUCTOS------------------
 
         public static List<ShowProductModel> SelectAllProducts()
         {
@@ -209,6 +209,37 @@ namespace POSSystemLibrary.Management
             {
 
                 throw;
+            }
+        }
+
+        //---------------METODOS DE BUSQUEDA DE VARIOS PRODUCTOS------------------
+
+        public static List<ShowProductModel> SelectMultipleProducts(string text)
+        {
+            try
+            {
+                string code = text;
+                string brand = text;
+                string category = text;
+                string subcategory = text;
+                string description = text;
+
+                string[] product = new string[] { code,  brand, category, subcategory, description };
+
+                ShowProductModel showProduct = new ShowProductModel()
+                {
+                    Code = code,
+                    Brand = brand,
+                    Category = category,
+                    Subcategory = subcategory,
+                    Description = description
+                };
+                return ProductConnection.SelectMultipleProducts(showProduct);
+            }
+            catch (Exception ex)
+            {
+                //Log4Net
+                return null;
             }
         }
     }

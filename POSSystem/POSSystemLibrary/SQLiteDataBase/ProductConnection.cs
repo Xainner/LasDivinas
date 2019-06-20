@@ -120,7 +120,6 @@ namespace POSSystemLibrary.SQLiteDataBase
 
         //-------------------CONSULTAS--------------------------------------------------
 
-
         public static List<ShowProductModel> SelectAllProducts()
         {
             try
@@ -128,10 +127,11 @@ namespace POSSystemLibrary.SQLiteDataBase
                 using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
                 {
                     var output = cnn.Query<ShowProductModel>("" +
-                        "SELECT Id_Product, Code, B.Name as Brand, S.Name as Subcategory, Description, " +
+                        "SELECT Id_Product, Code, B.Name as Brand, C.Name as Category, S.Name as Subcategory, Description, " +
                         "Quantity_Stock, Price, Lower_Price, Image, Ivi " +
                         "FROM Tbl_Product P INNER JOIN Tbl_Brand B ON P.Id_Brand = B.Id_Brand " +
-                        "INNER JOIN Tbl_Subcategory S ON P.Id_Subcategory = S.Id_Subcategory");
+                        "INNER JOIN Tbl_Subcategory S ON P.Id_Subcategory = S.Id_Subcategory " +
+                        "INNER JOIN Tbl_Category C ON S.Id_Category = C.Id_Category");
 
                     //SELECT Id_Product, Code, Tbl_Brand.Name, Tbl_Subcategory.Name, Description, Quantity_Stock, Price, Lower_Price, Image, Ivi FROM Tbl_Product INNER JOIN Tbl_Brand ON Tbl_Product.Id_Brand = Tbl_Brand.Id_Brand INNER JOIN Tbl_Subcategory ON Tbl_Product.Id_Subcategory = Tbl_Subcategory.Id_Subcategory limit 20
                     return output.ToList();
@@ -168,6 +168,37 @@ namespace POSSystemLibrary.SQLiteDataBase
             {
                 var output = cnn.Query<ProductModel>("SELECT * FROM Tbl_Product WHERE Id_Product = @Id_Product", productModel);
                 return output.Single();
+            }
+        }
+
+        //---------------CONSULTA DE VARIOS PRODUCTOS------------------
+
+        //No esta terminado, falta 
+        public static List<ShowProductModel> SelectMultipleProducts(ShowProductModel showProduct)
+        {
+            try
+            {
+                using (IDbConnection cnn = new SQLiteConnection(LoadConnectionString()))
+                {
+                    showProduct.Code = $"%{ showProduct.Code }%";
+                    showProduct.Category = $"%{ showProduct.Category }%";
+                    showProduct.Subcategory = $"%{ showProduct.Subcategory }%";
+                    showProduct.Description = $"%{ showProduct.Description }%";
+
+                    var output = cnn.Query<ShowProductModel>("" +
+                        "SELECT Id_Product, Code, B.Name as Brand, C.Name as Category, S.Name as Subcategory, Description, " +
+                        "Quantity_Stock, Price, Lower_Price, Image, Ivi " +
+                        "FROM Tbl_Product P INNER JOIN Tbl_Brand B ON P.Id_Brand = B.Id_Brand " +
+                        "INNER JOIN Tbl_Subcategory S ON P.Id_Subcategory = S.Id_Subcategory " +
+                        "INNER JOIN Tbl_Category C ON S.Id_Category = C.Id_Category " +
+                        "WHERE Code like @Code OR Category like @Category OR Subcategory like @Subcategory OR Description like @Description", showProduct);
+
+                    return output.ToList();
+                }
+            }
+            catch (Exception ex)
+            {
+                return null;
             }
         }
     }

@@ -47,9 +47,8 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.PurchaseOrderButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.AttributesButton = new System.Windows.Forms.Button();
             this.DraggablePanel.SuspendLayout();
-            this.MainPanel.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -289,7 +288,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.MainPanel.AutoScroll = true;
             this.MainPanel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.MainPanel.Controls.Add(this.label2);
             this.MainPanel.Location = new System.Drawing.Point(12, 120);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(1294, 639);
@@ -332,14 +330,22 @@
             this.PurchaseOrderButton.UseVisualStyleBackColor = true;
             this.PurchaseOrderButton.Click += new System.EventHandler(this.PurchaseOrderButton_Click);
             // 
-            // label2
+            // AttributesButton
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(245, 284);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 13);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "pamela es de todos";
+            this.AttributesButton.FlatAppearance.BorderSize = 0;
+            this.AttributesButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.AttributesButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AttributesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AttributesButton.Image = ((System.Drawing.Image)(resources.GetObject("AttributesButton.Image")));
+            this.AttributesButton.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.AttributesButton.Location = new System.Drawing.Point(609, 36);
+            this.AttributesButton.Name = "AttributesButton";
+            this.AttributesButton.Size = new System.Drawing.Size(93, 78);
+            this.AttributesButton.TabIndex = 1;
+            this.AttributesButton.Text = "Atributos";
+            this.AttributesButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.AttributesButton.UseVisualStyleBackColor = true;
+            this.AttributesButton.Click += new System.EventHandler(this.AttributesButton_Click);
             // 
             // FrmMain
             // 
@@ -353,6 +359,7 @@
             this.Controls.Add(this.SettingsButton);
             this.Controls.Add(this.BusinessButton);
             this.Controls.Add(this.ProductButton);
+            this.Controls.Add(this.AttributesButton);
             this.Controls.Add(this.EmployeesButton);
             this.Controls.Add(this.ClientsButton);
             this.Controls.Add(this.PurchaseOrderButton);
@@ -366,8 +373,6 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.DraggablePanel.ResumeLayout(false);
             this.DraggablePanel.PerformLayout();
-            this.MainPanel.ResumeLayout(false);
-            this.MainPanel.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -395,7 +400,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button MaximizeButton;
         private System.Windows.Forms.Button PurchaseOrderButton;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button AttributesButton;
     }
 }
 
